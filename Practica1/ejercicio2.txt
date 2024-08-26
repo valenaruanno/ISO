@@ -1,0 +1,28 @@
+2. Distribuciones de GNU/Linux:
+
+(a) ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/Linux y cite diferencias básicas entre ellas.
+
+(b) ¿En qué se diferencia una distribución de otra?
+
+(c) ¿Qué es Debian? Acceda al sitio e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.
+
+a- Una distribucion de GNU/Linux es un sistema operativo completo basado en el nùcleo Linux que incluye una collecciòn de software, herramientas y utilidades provenientes 
+del proyecto GNU y otras fuentes.
+    - Ubuntu.
+    - Debian.
+    - OpenSolaris.
+    - OpenBSD. 
+
+b- Las distintas versiones se diferencian en aspectos claves que las hace màs adecuadas para distintos usuarios, entornos o casos de uso. 
+    - Gestor de paquetes -> sistema que facilita la instalacion, actualizacion y eliminacion de software. 
+    - Enfoque y pùblico objetivo. 
+    - Estabilidad vs innovacion.
+    - Entornos de escritorio.
+    - Modelos de lanzamiento ->  define como y cuando se actualiza el sistema.
+    - Licencias y polìticas de software -> soporte empresarial o de usuario. 
+    - Rendimiento y requisitos de hardware.
+    - Compatibilidad con hardware.
+
+c- Debian es una distribucion de Linux creada por una asociacion de personas que han hecho causa comùn para crear un sistema operativo libre. El proyecto comenzò en agosto de 1993 
+gracias a Ian Murdock, como una distribucion que se realizaria de forma abierta, en la linea del espiritu de Linux y GNU. Debian estaba pensada para ser creada de forma cuidadosa 
+y cuncienzuda, y ser mantenida y soportada con el mismo ciudado. 

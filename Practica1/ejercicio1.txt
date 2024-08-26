@@ -1,0 +1,44 @@
+1. Características de GNU/Linux:
+(a) Mencione y explique las características más relevantes de GNU/Linux.
+(b) Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los
+puntos mencionados en el inciso a.
+(c) ¿Qué es GNU?
+(d) Indique una breve historia sobre la evolución del proyecto GNU
+(e) Explique qué es la multitarea, e indique si GNU/Linux hace uso de ella.
+(f) ¿Qué es POSIX?
+
+a- Caracteristicas:
+    - Es un Sistema Operativo tipo Unix (Unix like), pero libre.
+    - S.O. diseñado por miles de programadores.
+    - S.O. gratuito y de libre distribuciòn.
+    - Existen diversas distribuciones (customizaciones).
+    - Es còdigo abierto, lo que nos permite estudiarlo, personalizarlo, auditarlo, aprovecharnos de la documentaciòn, etc...
+
+
+b- GNU es el "apodo" que se utiliza para llamar a este Unix Libre.
+
+d-  GNU fue iniciado por Richard Stallman en 1983 con el fin de crear un Unix libre. Luego en 1985, Stallman crea la FSF (Free Software Fundation) con el fin de 
+    financiar el proyecto GNU. Ya en 1990, GNU contaba con un editor de texto y varias bibliotecas que componen un Unix tìpico. Ya en 1991 Linus Torvals puso
+    manos a la obra para crear un kernel denominado Linux, el cual se distribuirìa bajo la licencia GPL (General Public License de GNU).
+    En 1992 Richard y Torvals fucionan las dos ideas y nace el GNU / Linux el cual pertenece al desarrollo de software libre.
+
+e- Multitarea significa que sistema operativo es capaz de trabajar con varios procesos o aplicaciones al mismo tiempo. GNU / Linux posee esta Caracteristica
+   de ser multitarea.
+
+f- Posix es un conjunto de estàndares definidos por la IEEE que especifican una interfaz comùn para sistemas operativos.  Su objetivo general es mejorar la 
+    portabilidad del software para que este pueda ser compilado y ejecutado en diferentes sistemas operativos. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,34 @@
+4. Kernel:
+(a) ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de
+GNU/Linux.
+(b) ¿Cuáles son sus funciones principales?
+(c) ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en
+versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la
+versión 2.6?
+(d) ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?
+(e) ¿Dónde se encuentra ubicado dentro del File System?
+(f) ¿El Kernel de GNU/Linux es monolítico? Justifique.
+
+a- LA funcion del Kernel es hacer que el hardware y el software puedan trabajar juntos. 
+
+   En 1991, Linus Torvalds inicia la programacion de un kernel basado en Minix (clon de Unix desarrolado para uso didactico) y ese mismo año se anuncia la primera 
+   version oficial de Linux. En 1992, se fuciona con el GNU formando el GNU/Linux. La version 1.0 aparecio en 1994 y luego millones de programadores siguieron
+   buscando desarrollarlo. Entre 1996 y 2004  se desarrollo la version 2.0, aunque en 1999 se lanza la version 2.2 con mejoras de portabilidad. En 2011, en conmemoracion
+   por los 30 años, se crea la version 3.0.  
+
+
+b- Sus funciones mas importantes son la administracion de memoria, cpu y la E/S. 
+
+c- La version actual es la 4.0.2. Antes de la version 2.4 el esquema dde versiones era de la siguiente forma
+
+        X.Y.Z
+     Donde X marca la version mas reciente, Y marcaba la estabilidad (si era impoar era desarrollo y si eran pares era produccion) y Z era la revision o parche.
+
+d- Si, es posible y comunmente se lo hace cuando se desea conservar una version anterior por razones de compatibilidad o estabilidad. 
+
+e- Se encuentra ubicado en el /boot.
+
+f- El kernel de Linux es un nucleo monolitico hibrido, lo que significa que los drivers y el codigo se ejecutan en modo privilegiado y lo que lo hace hibrido es la capacidad 
+   de cargar y descargar funcionalidades a traves de modulos.
+
+
