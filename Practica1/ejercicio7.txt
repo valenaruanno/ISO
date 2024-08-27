@@ -1,0 +1,58 @@
+Particiones:
+
+(a) Definición. Tipos de particiones. Ventajas y Desventajas.
+(b) ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos IDE, SCSI y
+SATA).
+(c) ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, 
+identificación, tipo de File System y punto de montaje.
+(d) Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se
+deba realizar en su sistema operativo.
+(e) ¿Qué tipo de software para particionar existe? Menciónelos y compare.
+
+a- Una particion es una forma de dividir logicamente el disco. Existen cinco tipos de particiones:
+    - Primaria: division cruda del disco  (puede haber 4 por disco). Se almacena informacion de la misma en el MBR 
+    (sector reservado del disco físico (cilindro 0, cabeza 0, sector 1)). 
+    - Extendida: sirve para contener unidades lógicas en su interior. Solo puede existir una de estas por disco.
+    - Lógica: ocupa la totalidad o parte de la particion extendida y se le define un tipo de FileSystem. 
+    - GPT: es un tipo de particion mas moderno que el antiguo MBR (master boot record).
+    - SWAP. Es un tipo especial de particion, denominada virtual, en GNU/Linux que se utiliza como area de intercambio
+    y es utilizada como una extension de la memoria RAM. 
+
+    Ventajas -> Permite la separacion de los sistemas operativos, la organizacion y gestion de datos, permite la 
+    facilidad de formateo y reinstalación, el uso eficiente del SWAP, un mejor control sobre el espacio disponible y
+    la compatibilidad con sistemas de archivos diferentes. 
+
+    Desventajas -> Gestion de espacio limitada, complejidad en la configuracion, la particion del disco en demasiadas
+    partes puede afectar el rendimiento, produce limitaciones del sistema MBR, se desperdicia espacio en particiones
+    de reserva, dificultades para redimensionar y puede producir problemas para instalar varios sistemas operativos.
+
+b- La particiones en GNU/Linux se identifican con /. Por un lado podemos identificar las particiones en discos IDE,
+donde el primer disco se identifica con /dev/hda y el segundo como /dev/hdb y para los discos SCSI y SATA se utiliza
+el prefijo sd. El primer disco se identifica como /dev/sda y el segundo como /dev/sdb. 
+
+c- Para instalar GNU/Linux son necesarias como minimo 2 particiones: 
+    - Raiz : Es un tipo de particion primaria que representa el tope de la estructura de directorios. El punto de 
+    montaje es '/'.
+    - Swap: Es un tipo de particion swap y es una particion virtual que permite extender la memoria RAM. El punto de
+    montaje es '/swap'.
+    Ambas particiones utilizan el tipo de fileSystem EXT4.
+
+d- Tipo:
+    - Particionamiento para multiboot: el proposito de este particionamiento se debe a que el usuario desea tener 
+    multiples sistemas operativos. Se necesitan varias particiones primarias.
+    - Para mejorar la administracion de archivos y la seguridad: Un servidor necesita aislar diferentes tipos de 
+    datos y procesos para evitar que un fallo afecte al sistema completo.
+    - Particionamiento para rendimiento: un sistema de base de datos de alto rendimiento necesita maximizar la 
+    eficiencia en el acceso a los datos.
+    -Para recuperacion y copias de seguridad: se desea la configuracion de un sistema que permita la recuperacion
+    facil en caso de fallo del sistema operativo.
+    - Para sistemas virtualizados: un servidor esta configurado para ejecutar varias maquinas virtuales con 
+    diferentes funciones.
+    - Para aislamiento de entornos de desarrollo y produccion: un desarrollador necesita mantener separadas las 
+    versiones de produccion y de desarrollo de un proyecto.
+
+e- Tipos de software: 
+    - GParted (GNOME Partition Editor): Es utilizado en linux, es de codigo abierto y gratis, no tiene soporte en 
+    windows.
+    - EaseUS Partition Master: Es utilizado en windows, tiene una interfaz grafica amigable y facil de usar aunque
+    las funciones avanzadas son pagas.

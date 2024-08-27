@@ -1,0 +1,37 @@
+Sistema de Archivos (File System):
+
+(a) ¿Qué es?
+(b) Mencione sistemas de archivos soportados por GNU/Linux.
+(c) ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?
+(d) ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes 
+e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?
+
+a- El sistema de archivos es el encargado de organizar la forma en que se guardan los archivos en dispositivos 
+de almacenamiento.
+
+b- Los soportados por GNU/Linux son los extended v2, v3 y v4.
+
+c-  Si es posible.
+
+d- La estructura basica de los file system en GNU/Linux es:
+    / -> Es el tope de la estructura de directorios.
+    /home -> Se almacenan los archivos del usuario.
+    /boot -> Archivos de arranque.
+    /var -> Informacion que varia segun el tamaño.
+    /etc -> Archivos de configuracion.
+    /bin -> Archivos binarios y ejecutables.
+    /deb -> enlace a dispositivos.
+    /usr -> plicaciones de usuario.
+    Las siglas FHS significan FileSystem Hierarchy Standard. 
+
+
+
+
+
+
+
+
+
+
+
+

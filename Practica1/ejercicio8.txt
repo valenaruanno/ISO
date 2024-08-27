@@ -1,0 +1,93 @@
+Arranque (bootstrap) de un Sistema Operativo:
+
+(a) ¿Qué es el BIOS? ¿Qué tarea realiza?
+(b) ¿Qué es UEFI? ¿Cuál es su función?
+(c) ¿Qué es el MBR? ¿Que es el MBC?
+(d) ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.
+(e) ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se
+instalan? Cite gestores de arranque conocidos.
+(f) ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que
+el Sistema Operativo es cargado (proceso de bootstrap)?
+(g) Analice el proceso de arranque en GNU/Linux y describa sus principales pasos.
+(h) ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
+(i) ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique
+
+
+a- El bios es un software de bajo nivel que esta almacenado en un chip en la placa base de la computadora cuya funcion
+es ser el intermediario entre el hardware y el software durante el arranque del sistema. Lo que hace es inicializar y
+gestionar los componentes del hardware cuando la computadora se enciende, antes que el sistema operativo tome el control.
+
+b- La UEFI es una tecnologia que ha reemplazado la BIOS en el ultimo tiempo. Esta interfaz de firmware ofrece mas 
+funcionalidades, una mejor interfaz, mayor flexibilidad y rapidez, y más seguridad. 
+
+c- El MBR (Master Boot Record) es un sector reservado del disco (cilindro 0, cabeza 0, sector 1) y contiene informacio 
+crucial sobre como estan organizadas las particiones en el disco y el codigo necesario para el arranque del sistema 
+operativo denominado MBC (Master Boot Code).  
+
+d- Las siglas GPT hacen referencia a GUID Partition Table. El GPT sustituye al MBR, resolviendo varias de sus 
+limitaciones como el soporte de discos grandes y el numero de particiones. Su formato es:
+    -> Encabezado GPT: se almacena al inicio del disco y contiene informacion importante sobre la tabla de particiones,
+    como la ubicacion de las particiones y la cantidad de entradas en la tabla.
+    -> Tabla de particiones: tiene entras para muchas particiones, generalmente 128.
+    -> Copia de respaldo.
+    -> Sector de arranque de proteccion MBR: incluye un protector MBR para garantizar la compatibilidad con sistemas
+    que no admiten GPT y evitar que programas antiguos piensen que el disco no esta particionado.
+
+e- Un gestor de arranque es un software que permite iniciar el sistema operativo cuando se enciende la computadora. La 
+funcionalidad principal es cargar el sistema operativo o permitir al usuario elegir entre varios sistemas operativos
+instalados. 
+Tipos de gestores de arranque:
+    - De una sola etapa: son simples y se encuentran mayormente en sistemas embebidos o dispositivos con un solo 
+    sistema operativo. 
+    - De dos etapas: Son mas complejos y tipicos en computadoras de proposito general. La primera etapa es pequeña y
+    simple y se encarga de cargar la segunda etapa, que suele estar en una particion de disco y permite funcionalidades
+    mas avanzadas, como un menu de seleccion de sistemas operativos.
+    - En cadena: Se utiliza cuando se tienen multiples gestores de arranque instalados. 
+Donde estan instalados: 
+    - Sector de arranque del disco.
+    - Particion especifica del disco en sistemas que usan UEFI. 
+    - Dentro del propio sistema operativo.
+Gestores de arranque conocidos -> GRUB y LILO
+
+f- La serie de pasos desde que una computadora se enciende hasta que se carga el sistema operativo se denomina 
+Bootstrap y esta compuesta por los isguientes pasos:
+    1- Encendido y suministro de energía: cuando se enciende la fuente de alimentacion suministra corriente electrica
+    a todos los componentes del sistema.
+    2- Ejecucion del BIOS o UEFI: 
+        - Chequeos del hardware.
+        - Inicializacion de los dispositivos.
+    3- Carga del gestor de arranque.
+    4- Eleccion del sistema operativo. 
+    5- Carga del nucleo: El gestor de arranque locaiza el kernel y lo carga en memoria RAM.
+    6- Inicializacin del sistema operativo.
+    7- Carga de la interfaz gráfica o linea de comandos. 
+    8- Inicio de sesion del usuario. 
+
+g- Principales pasos en el arranque de GNU/Linux:
+    1- Encendido y POST: la BIOS realiza el chequeo de hardware conocido como POST.
+    2- Gestor de arranque: inicia el sistema operativo.
+    3- Cargar el Kernel de linux. 
+    4- Initramfs o Initrd: antes de montar el sistema de archivos raiz definitivo, el kernel puede utilizar una imagen
+    temporal denominada Initramfs. 
+    5- Proceso de inicializacion.
+    6- Arranque de servicios y DAEMONS. 
+    7- Carga de la interfaz de usuario. 
+
+h- Los pasos que le siguen al proceso de parada son: 
+    1- Proceso de apagado.
+    2- Notificacion a 'systemd' o 'init': el 'systemd' lo que hace es cambiar el sistema a un target especial.
+    3- Deteccion de servicios. 
+    4- Desmontar el sistema de archivos. 
+    5- Sincronizacion de la caché de disco. 
+    6- Apagado del hardware. 
+    7- Apagado o reinicio.
+
+
+
+
+
+
+
+
+
+

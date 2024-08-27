@@ -1,0 +1,9 @@
+5. Intérprete de comandos (Shell)):
+(a) ¿Qué es?
+(b) ¿Cuáles son sus funciones?
+(c) Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos
+entre ellos.
+(d) ¿Dónde se ubican (path) los comandos propios y externos al Shell?
+(e) ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?
+(f) ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde
+se define? ¿Cualquier usuario puede realizar dicha tarea?
