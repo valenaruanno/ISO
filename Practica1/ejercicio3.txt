@@ -1,0 +1,21 @@
+3. Estructura de GNU/Linux:
+(a) Nombre cuales son los 3 componentes fundamentales de GNU/Linux.
+(b) Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
+
+a- Componentes fundamentales:
+    - Nucleo -> facilita la comunicacion entre el hardware y el software, maneja la multitarea, controla los procesos, la memoria y gestiona los sistemas de archivos.
+    - Herramientas y utilidades GNU -> proporciona los componentes y utilidades que permiten interactuar con el sistema, como la ejecucion de programas, la compilacion
+      del software, y la administracion bàsica de archivos y usuarios. 
+    - Sistema de gestion de paquetes -> facilita la instalacion y gestion del software, garantizando que las dependencias necesarias para ejecutar los programas se 
+      instalen y se mantengan actualizadas. 
+
+b- Estructura bàsica del sistema operativo GNU / Linux: 
+    - Nucleo: como dijimos antes, es el encargado de que el software y el hardware puedan trabajar juntos.
+    - Interprete de comandos: es el modo de comunicacion entre el ususario y el SO. Su funcion es ejecutar programas a traves del ingreso de comandos.
+    - Sistema de archivos: organiza la forma en que se almacenan los archivos en dispositivos de almacenamiento. 
+    - Utilidades: son un paquete de software que permite diferenciar entre las distintas distribuciones. 
+        - Paquetes de software.
+        - Editores de video.
+        - Herramientas de networking.
+        - Paquetes de oficina.
+        - Interfaces graficas.

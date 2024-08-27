@@ -1,4 +1,5 @@
-5. Intérprete de comandos (Shell)):
+Interprete de comandos 
+
 (a) ¿Qué es?
 (b) ¿Cuáles son sus funciones?
 (c) Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos
@@ -7,3 +8,15 @@ entre ellos.
 (e) ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?
 (f) ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde
 se define? ¿Cualquier usuario puede realizar dicha tarea?
+
+a- El interprete de comandos es el modo de comunicacion entre el ususario y el sistema operativo. 
+
+b- Su funcion es ejecutar programas a partir del ingreso de comandos. 
+
+
+c-Bourne Shell (sh) -> fue uno de los primeros interpretes de comandos de UNIX y se caracteriza por la simplicidad, compatibilidad, interactividad limitada y el uso de scripts. 
+
+  Korn Shell (ksh) -> combina las mejores caracteristicas de shells previos y se caracteriza por la interactividad, por tener historial de comandos, por tener soportes para 
+  la programacion avanzada, por su eficiancia y compatibilidad.
+  Bourne Again Shell (bash)  -> es el interprete de comandos por defectos de la mayoria de los sistemas GNU y se caracteriza por la interactividad avanzada, por tener 
+  historial de comandos, por tener soportes para la programacion avanzada, por la portabilidad y los comandos integrados.
