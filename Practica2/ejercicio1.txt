@@ -1,0 +1,20 @@
+1. Editor de textos:
+(a) Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.
+(b) ¿En qué se diferencia un editor de texto de los comandos cat, more o less? Enumere
+los modos de operación que posee el editor de textos vi.
+(c) Nombre los comandos más comunes que se le pueden enviar al editor de textos vi.
+
+a- VI, .
+b-
+Modos de operacion: 
+    - Modo insert (i).
+    - Modo visual(v).
+    - Modo normal (esc).
+c- Comandos:
+    - w: escribir cambios.
+    - q o q!: salir del editor.
+    - dd: cortar.
+    - y: copiar al portapapeles.
+    - p: pegar al portapapeles.
+    - u: deshacer.
+    - /frase: busca "frase" dentro del archivo. 
