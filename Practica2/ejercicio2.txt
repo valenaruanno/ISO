@@ -1,0 +1,83 @@
+2. Proceso de Arranque SystemV (https://github.com/systeminit/si):
+(a) Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.
+(b) Proceso INIT. ¿Quién lo ejecuta? ¿Cuál es su objetivo?
+(c) RunLevels. ¿Qué son? ¿Cuál es su objetivo?
+(d) ¿A qué hace referencia cada nivel de ejecución según el estándar? ¿Dónde se define qué Runlevel ejecutar al iniciar el sistema operativo? ¿Todas las distribuciones respetan
+estos estándares?
+(e) Archivo /etc/inittab. ¿Cuál es su finalidad? ¿Qué tipo de información se almacena en el? ¿Cuál es la estructura de la información que en él se almacena?
+(f) Suponga que se encuentra en el runlevel <X>. Indique qué comando(s) ejecutaría para cambiar al runlevel <Y>. ¿Este cambio es permanente? ¿Por qué?
+(g) Scripts RC. ¿Cuál es su finalidad? ¿Dónde se almacenan? Cuando un sistema GNU/Linux arranca o se detiene se ejecutan scripts, indique cómo determina qué script ejecutar
+ante cada acción. ¿Existe un orden para llamarlos? Justifique.
+
+
+
+a- 
+1 - Se empieza a ejecutar el codigo del BIOS.
+2 - El BIOS ejecuta el POST.
+3 - El BIOS lee el sector de arranque (MBR).
+4 - Se carga el gestor de arranque (MBC).
+5 - El bootloader carga el kernel y el initrd.
+6 - Se monta el initrd como sistema de archivos raiz y se inicializan componentes esenciales (ej.: scheduler).
+7 - El Kernel ejecuta el proceso init y se desmonta el initrd.
+8 - Se lee el /etc/inittab.
+9 - Se ejecutan los scripts apuntados por el runlevel 1.
+10 - El final del runlevel 1 le indica que vaya al runlevel por defecto.
+11 - Se ejecutan los scripts apuntados por el runlevel por defecto.
+12 - El sistema esta listo para usarse.
+
+b- El proceso init es ejecutado por el kernel y su funcion es cargar todos los subprocesos necesarios para el corecto funcionamiento del S.O.
+
+c- Los runLevels son los modos en que arranca Linux. Estos definen el nivel de funcionamiento del sistema operativo, dependiendo de las necesidades del usuario o 
+del administrador de sistemas. 
+
+d- Niveles de ejecucion: 
+    Nivel 0: halt (parada).
+    Nivel 1: single user mode (monousuario).
+    Nivel 2: multiuser sin soporte de red.
+    Nivel 3: modo multiusuario completo por consola.
+    Nivel 4: no se utiliza.
+    Nivel 5: X11 (modo multiusuario completo con login grafico basado en X).
+    Nivel 6: reboot (Reinicio del sistema).
+El runLevel predeterminado que el sistema debe ejecutar al iniciar se define en el archivo /etc/inittab. No todas las distibuciones siguen exactamente el mismo enfoque
+en cuanto a la gestion de los runLevels, preo la mayoria respeta el concepto de runLevel o target. Ahora se utiliza el systemD que es un sistema mas moderno.
+
+e- El archivo /etc/inittab tiene como funcion definir como se comporta el proceso de inicializacion del sistema y como gestionar los runLevels. 
+En el mismo se almacena: 
+    - ID: identifica la entrada en inittab
+    - NIVELES DE EJECUCION en los que se realiza la accion
+    - ACCION a realizar:
+        - wait.
+        - Init default
+        - ctrlaltdel
+
+    - PROCESO que sera ejecutado.
+
+f- Para cambiar entre runLevels podemos utilizar los comandos init o telinit. Estos cambios se hacen de manera temporal hasta el proximo reinicio de la maquin. Para realizar un
+cambio permanente, deberiamos modificar el archivo /etc/inittab.
+
+g- Los scrpts RC tienen un papel crucial en la administracion de servicios y procesos durante el arranque y la deteccion del sistema. En el sistem V se almacenan generalmente en
+los directorios /etc/init.d/ y en los subdirectorios especificos para cada runLevel, ubicados en /etc/rc.d/.
+Cuando el sistema arranca o se apaga, init se encarga de gestionar los runLevels consultando el directorio correspondiente para el runLevel actual y ejecuta los scripts segun el 
+orden definido en esos directorios. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

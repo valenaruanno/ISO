@@ -1,0 +1,17 @@
+9. Archivos:
+(a) ¿Cómo se identifican los archivos en GNU/Linux?
+(b) Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more
+(c) Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo
+debe contener su número de alumno y su nombre.
+(d) Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué
+diferencia nota?
+
+a- Los archivos se pueden identificar mediante su nombre unico, mediante la ruta de los mismos
+o mediante metadatos que los identifican y describen y son obtenibles mediante el comando
+ls -l.
+
+b- Cat te permite crear, fusionar o imprimir archivos en la pantalla de la salida estandar 
+o en otro archivo. En cambio, more permite ver, pero no modifica, el contenido de un archivo
+de comando y visualizarlo por paginas.
+
+d- El comando file se utiliza para determinar el tipo de archivo basandose en su contenido.

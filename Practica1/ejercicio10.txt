@@ -1,0 +1,13 @@
+10. Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.
+Investigue su funcionamiento y parámetros más importantes:
+(a) Cree la carpeta ISO2017 (mkdir)
+(b) Acceda a la carpeta (cd)
+(c) Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)
+(d) Liste el contenido del directorio actual (ls)
+(e) Visualizar la ruta donde estoy situado (pwd)
+(f) Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find -name)
+(g) Informar la cantidad de espacio libre en disco (df)
+(h) Verifique los usuarios conectado al sistema (who)
+(i) Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido
+(j) Mostrar en pantalla las últimas líneas de un archivo (tail [-n (para marcar el numero de 
+lineas que quiero ver)] [nombre]).

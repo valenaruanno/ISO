@@ -1,0 +1,78 @@
+11. Investigue su funcionamiento y parámetros más importantes:
+(a) shutdown -> se utiliza para apagar, reiniciar o cerrar sesion del sistema en forma controlada. Este comando le envia una notificacion a los usuarios activos. 
+Parametros:
+[sudo] [shutdown] [momento en el que se quiere apagar] -> para apagar
+[sudo] [shutdown] [-r] [momento en que se quiere reiniciar] -> para el reinicio
+[sudo] [shutdown] [-c ] "" -> -c se utiliza si se quiere cancelar el apagado / reinicio.
+
+(b) reboot -> reinicia el sistema operativo de manera inmediata. Al ejecutarlo, el sistema
+cierra todos los procesos en ejecucion.
+Parametros: 
+Puede tener algunos comandos como '-f' y '--force' que fuerza el reinicio del sistema sin 
+realizar previamente un apagado ordenado o '-p' y '--poweroff' que apaga el sistema despues 
+del reinicio.
+
+(c) halt -> detiene inmediatamente el sistema operativo y lo apaga. Al ejecutarse, se 
+detienen todos los procesos e3n ejecucion, se desmonta el sistema de archivos y finaliza
+el sistema de forma abrupta, y luego apaga el hardware.
+Parametros: 
+    - '-p' o '--poweroff': apaga el sistema despues de detenerlo.
+    - '-f' o '--force': fuerza el apagado del sistema.
+(d) locate -> se utiliza para buscar archivos y directorios en el sistema de archivos.
+Parametros: 
+    -i o --ignore-case: Ignora las diferencias entre mayúsculas y minúsculas al buscar. 
+    -r o --regexp: Permite usar una expresión regular para buscar archivos. 
+    -c o --count: Muestra el número de coincidencias en lugar de listar los archivos encontrados. 
+    -n <n> o --limit=<n>: Limita el número de resultados que se muestran a <n>. 
+    -e o --existing: Muestra solo archivos que existen en el sistema de archivos en el momento de la búsqueda. Esto puede ser útil para filtrar resultados obsoletos.   
+    -l o --limit=<n>: Especifica el número máximo de coincidencias que se deben mostrar.
+
+(e) uname -> muestra informacion sobre el sistema operativo y el kernel.
+Parametros: 
+    - -s o --kernel-name: Muestra el nombre del kernel.
+    - -n o --nodename: Muestra el nombre del sistema.
+    - -r o --kernel-release: Muestra la versión del kernel.
+    - -v o --kernel-version: Muestra la versión completa del kernel.
+    - -m o --machine: Muestra la arquitectura del hardware del sistema.
+    - -p o --processor: Muestra el tipo de procesador.
+    - -i o --hardware-platform: Muestra la plataforma de hardware.
+    - -o o --operating-system: Muestra el nombre del sistema operativo.
+
+(f) gmesg ->
+
+(g) lspci -> lista todos los dispositivos conectados al sistema.
+Parametros: 
+    -v o --verbose: Muestra información detallada sobre cada dispositivo PCI.
+    -vv o --very-verbose: Muestra aún más detalles que -v.
+    -k o --kernel: Muestra los módulos del kernel que están asociados con cada dispositivo PCI.
+    -s <bus:slot.func>: Muestra información solo sobre el dispositivo especificado por el identificador <bus:slot.func>.
+    -d <vendor:device>: Muestra información solo sobre dispositivos con un identificador de fabricante (vendor) y dispositivo (device) específicos.
+    -mm: Muestra la información en formato de lista de modo "multiline" (para un formato más legible).
+    -n o --numeric: Muestra los identificadores de los fabricantes y dispositivos en formato numérico en lugar de sus nombres.
+
+(h) at -> se utiliza para programar la ejecucion de comandos o scripts en una fecha y hora especificas.
+Parametros: 
+    - -f archivo: Especifica un archivo que contiene el comando o los comandos que se deben ejecutar. 
+    - -m: Envía un correo electrónico al usuario al completar la ejecución del comando, incluso si no hay salida estándar. 
+    - -q cola: Especifica la cola en la que se debe colocar el trabajo.
+    - -V: Muestra la versión del programa at.
+    - -d: Elimina un trabajo programado. 
+    - -l: Lista los trabajos programados.
+
+(i) netstat -> es un escript o comando personalizado para iniciar o reiniciar servicios de red.
+
+(j) mount -> se utiliza para montar sistemas de archivos en un punto de montaje.
+
+(k) umount ->se utiliza para desmontar sistemas de archivos en un punto de montaje.
+
+(l) head -> se utiliza para mostrar las primeras lineas de un archivo o entrada estandar.
+
+(m) losetup -> se utiliza para configurar y gestionar dispositivos de bucle.
+
+(n) write -> se utiliza para mandar mensajes a otros usuarios conectados en el mismo sistema.
+(ñ) mkfs -> se utiliza para crear un sistema de archivos en una particion o un dispositivo de almacenamiento.
+(o) fdisk (con cuidado) -> se utiliza para crear, eliminar, cambiar el tamaño y gestionar las particiones en discos duros.
+
+
+sudo? permite ejecutar comando con privilegios de 
+superusuarios o de otro usuario, segun la configuracion

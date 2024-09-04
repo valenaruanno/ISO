@@ -1,0 +1,17 @@
+3. SystemD(https://github.com/systemd/systemd):
+(a) ¿Qué es sytemd?
+(b) ¿A qué hace referencia el concepto de Unit en SystemD?
+(c) ¿Para que sirve el comando systemctl en SystemD?
+(d) ¿A qué hace referencia el concepto de target en SystemD?
+(e) Ejecute el comando pstree. ¿Qué es lo que se puede observar a partir de la ejecución
+de este comando?
+
+a- Systemd es el sistema que centraliza la administracion de demonios y librebrias del sistema.
+
+b- Unit hace referencia a las unidades de trabajo.
+
+c- Systemctl es la herramienta prinicpal para interactuar con systemd y permite iniciar, detener, reiniciar y comprobar el estado de servicios. 
+
+d- En systemd los targets son los runLevels .
+
+e- Lo que se puede observar son los procesos que se estan ejecutando de forma jerarquica, como estan organizados y la relacion de procesos padre e hijo. 

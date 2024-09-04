@@ -1,0 +1,81 @@
+5. FileSystem:
+(a) ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?
+    Los permisos sobre archivos son definidos mediante un conjunto de atributos que indican que usuarios pueden leer, escribir o ejecutar un archivo o directorio. Tipos de permiso:
+        - Lectura (R): permite leer el contenido de un archivo o listar el contenido de un directorio.
+        - Escritura (W): Permite modificar un archivo o agregar/eliminar archivos de un directorio.
+        - Ejecucion (X): Permite ejecutar un archivo o acceder a un directorio. 
+
+
+(b) Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los 
+permisos en GNU/Linux:
+chown
+    chmod -> Permite cambiar los permisos de un archivo. Sinopsis: chmod[modo][fichero].
+    chgrp -> Cambia el grupo de referencia y archivos de directorio- Sinopsis: chgrp[grupo][archivo].
+
+
+(c) Al utilizar el comando chmod generalmente se utiliza una notación octal asociada para 
+definir permisos. ¿Qué significa esto? ¿A qué hace referencia cada valor?
+    La notacion octal representa el patron de bits para el nuevo modo y consta de entre 1 y 4
+    digitos octales (0-7). En el primer bit, el 4 selecciona el ID de usuario configurado, 
+    el 2 el ID de grupo configurado y el 1 los atributos de eliminacion restringida o sticky 
+    bit. En el segundo bit, el 4 se utiliza para leer, el 2 para escribir y e 1 para ejecutar,
+    el tercer bit selecciona permisos para otros usuarios en el grupo del archivo y el cuarto 
+    para otros usuarios que no estyan en el grupo del archivo.
+
+
+(d) ¿Existe la posibilidad de que algún usuario del sistema pueda acceder a determinado
+archivo para el cual no posee permisos? Nombrelo, y realice las pruebas correspondientes.
+    Si, los casos son los siguientes:
+        - Root -> el superusiario tiene privilegios completos sobre todos los archivos del
+        sistema.
+        - SUID ->  si un archivo ejecutable tiene el bit de SUID activado, cuando cualquier 
+        usuario ejecuta ese archivo, la ejecucion se realiza con los permisos del 
+        propietario del archivo.  
+        - SGID -> si un archivo ejecutable tiene el bit de SGID activado, el archivo se 
+        ejecuta con los permisos del grupo propietario del archivo.
+        - Sticky bit en directorios -> con el sticky bit activado, solo el propietario del 
+        archivo, el del directorio o el usuario root puede eliminar o renombrar los archivos
+        dentro del directorio.
+        - ACL -> los sistemas de archivos que soportan ACL permiten asignar permisos mas 
+        granulares, incluso a usuarios especificos, mas alla de los permisos tradicionales.
+
+
+(e) Explique los conceptos de “full path name” y “relative path name”. De ejemplos claros
+de cada uno de ellos.
+    - Full path name es una ruta completa que especifica la direccion exacta de un archivo 
+    o directorio desde el directorio raiz del sistema. Ej: /home/usuarios/documentos/hola.txt.
+    - Relative path name especifica la ubicacion de un archivo o directorio en relacion con
+    el directorio de trabajo actual. No comienza con '/'. Ej: documentos/hola.txt.
+
+
+(f) ¿Con qué comando puede determinar en qué directorio se encuentra actualmente?
+¿Existe alguna forma de ingresar a su directorio personal sin necesidad de escribir
+todo el path completo? ¿Podría utilizar la misma idea para acceder a otros directorios?
+¿Cómo? Explique con un ejemplo.
+    Se puede indicar en que directorio nos encontramos actualmente con 'pwd'. Para ingresar
+    a tu directorio principal sin ingresar el path completo utilizados el comando 'cd ~'.
+    En cambio para acceder a otros directorios ingresados 'cd nombre_directorio'.
+
+
+(g) Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con
+el uso del FileSystem:
+    - cd: Se utiliza para cambiar de directorio al directorio que especifiques. Sinopsis:
+        cd [ruta].
+    - umount: Desmonta un sistema de archivos que ha sido montado. Sinopsis: 
+        umount [opciones][directorio]. Las opciones son: -a para desmitar todos los archivos
+        definidos en /etc/mtab, -f para forzar el desmontaje y -l para realizar un desmontaje 
+        peresozo.
+    - mkdir: Crea uno o mas directorios. Sinopsis: mkdir [directorio]. Las opciones son:
+        -p para crear directorios padres si no existen o -m establece permisos al momento de 
+        crear el directorio.
+    - du: muestra el tamaño de los archivos y directorios en la ruta especificada.
+        Sinopsis: du[ruta].
+    - rmdir: elimina directorios vacios. Sinopsis: rmdir [directorios].
+    - df: muestra informacion del uso del espacio en disco.
+    - ln: crea enlaces simbolicos y duros entre archivos. Sinopsis: ln [archivo][enlace].
+    - mount: monta un sistema de archvos en un punto del sistema. Sinopsis: 
+        mount [dispositivo][punto de montaje].
+    - ls: lista el contenido de un directorio. Sinopsis: ls [directorio].
+    - pwd: muestra el directorio de trabajo actual. No tiene parametros adicionales.
+    - cp: copia archivos o directorios. Sinopsis: cp [origen][destino].
+    - mv: mueve o renombre archivos y directorios. Sinopsis: mv [origen][destino].

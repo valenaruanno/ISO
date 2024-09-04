@@ -1,0 +1,70 @@
+4. Usuarios:
+(a) ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?
+(b) ¿A qué hacen referencia las siglas UID y GID? ¿Pueden coexistir UIDs iguales en un sistema GNU/Linux? Justifique.
+(c) ¿Qué es el usuario root? ¿Puede existir más de un usuario con este perfil en GNU/Linux? ¿Cuál es la UID del root?.
+(d) Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si
+no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique
+que no queden registros de él en los archivos de información de los usuarios y grupos.
+(e) Investigue la funcionalidad y parámetros de los siguientes comandos:
+useradd ó adduser
+usermod
+userdel
+su
+groupadd
+who
+groupdel
+passwd
+
+a- La informacion de los usuarios se guarda en varios archivos de configuracion ubicados en el diectorio /etc. 
+
+b- El UID es el numero unico de cada usuario del sistema, en cambio el GID es el identificador para un grupo en el sistema. Pueden coexistir UIDs iguales en el sistema pero no es una
+practica recomendada. 
+
+c- El usuario root es el superusuario o administrador del sistema, es el usuario con mas privilegios y el que tiene control total sobre el sistema. Pueden existir mas de un usuario
+ root pero no es recomendable por riesgos de seguridad y administracion. El UID del usuario root siempre es 0.
+
+d- Falto crear el archivo en /home.
+
+e- 
+- useradd ó adduser: crea un nuevo usuario o edita la informacion por default de un usuario ya creado. Parametros de los comandos:
+    -m: crea el directorio home del  usuario si no existe.
+    -d: especifica el directorio home del usuario.
+    -s: Establece el shell de iniciao de sesio del usuario.
+    -g: especifica el grupo principal del usuario.
+    -u: establece el UID. 
+- usermod: se utiliza para modificar los detalles de una cuenta de usuario existente. Los parametros que utiliza son: 
+    -c: establece o edita el comentario asociado con la cuenta de usuario.
+    -d: cambia el directorio home del usuario.
+    -m: mueve el contenido del antiguo directorio home al nuevo.
+    -e: establece la fecha en la que la cuenta del usuario expirara.
+    -g: cambia el grupo principal del usuario. 
+    -l: cambia el nombre de inicio de sesion del usuario.
+- userdel: se utiliza para eliminar una cuenta de usuario del sistema. Sus principales parametros son: 
+    -r: elimina el directorio home del usuario y su correo.
+    -f: fuerza la eliminacion del usuario. 
+- su: cambia de usuario en la terminal. Sus parametros principales son: 
+    - '--login': cambia al al entrono de inicio del usuario objetivo.
+    -c: permite ejecutar un solo comando como el usuario especificado.
+    -s: especifica el shell a utilizar en lugar del shell predeterminado del usuario. 
+    -m: mantiene el entrono del usuario original en lugar de cargar el entorno del usuario objetivo.
+- groupadd: Se utiliza para crear un nuevo grupo. Sus parametros principales son: 
+    -g: especifica el GID del nuevo grupo.
+    -r: crea un grupo del sistema.
+
+- who: se utiliza para mostrar informacion de los usuarios que estan conectados actualmente al sistema. Sus parametros principales son: 
+    -a: muestra toda la inforamcion disponible.
+    -b: muestra la ultima vez que el sistema fue iniciado.
+    -d: muestra eventos de fin de sesion.
+    -q: muestra solo los nombres de usuario conectados y el numero total de usuarios conectados.
+    -H: muestra los encabezados de columna en la salida.
+- groupdel: se utiliza para eliminar un grupo del sitema. Se puede utilizar el comando getent para asegurarnos que se elimino.
+- passwd: se utiliza para cambiar contraseñas de usuarios. Sus principales parametros son:
+    -d: elimina la contraseña del usuario dejandolo sin contraseña. 
+    -e: establece la contraseña del usuario como expirada. 
+    -l: bloquea la cuenta del usuario.
+    -u: desbloquea una cuenta que ha sido bloqueada.
+    -S: muestra el estado de la contraseña del usuario.
+
+
+
+

@@ -4,12 +4,14 @@
 los modos de operación que posee el editor de textos vi.
 (c) Nombre los comandos más comunes que se le pueden enviar al editor de textos vi.
 
-a- VI, .
-b-
-Modos de operacion: 
-    - Modo insert (i).
-    - Modo visual(v).
-    - Modo normal (esc).
+a- VI, nano y emacs.
+b- Cat -> muestra el contenido completo de un archivo de texto en la terminal de una vez, sin paginar.
+   More -> Muestra el contenido de un archivo pagina por pagina.
+   Less -> Permite despalzarte tanto hacia adelante como hacia atras en un archivo. Puede utilizarse para la busqueda, con '/' buscamos hacia adelante y con '?' hacia atras.
+    Modos de operacion: 
+        - Modo insert (i).
+        - Modo visual(v).
+        - Modo normal (esc).
 c- Comandos:
     - w: escribir cambios.
     - q o q!: salir del editor.
