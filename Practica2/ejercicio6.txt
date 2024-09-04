@@ -1,0 +1,93 @@
+6. Procesos:
+(a) ¿Qué es un proceso? ¿A que hacen referencia las siglas PID y PPID? ¿Todos los
+procesos tienen estos atributos en GNU/Linux? Justifique. Indique qué otros atributos
+tiene un proceso.
+
+    Un proceso es un programa en ejecucion que tiene un ciclo de vida que va desde que se lo dispara hasta que culmina.
+    Cada proceso tiene sus propios recursos asignados, como memoria, archivos y tiempos de CPU, y puede ejecutarse de 
+    forma independiente a otros procesos. El PID hace referencia a un numero unico que identifica cada proceso, en cambio
+    el PPID hace referencia a un identificador del proceso padre que creo o inicio un proceso hijo. Estos atributos se 
+    encuentran en todos los procesos junto a otros como: 
+        - UID: Identificador del usuario que ha inicado el proceso.
+        - GID: Identificador del grupo al que pertenece el usuario que ha iniciado el proceso.
+        - Estado del proceso: Indica si el proceso esta corriendo, durmiendo, durmiendo ininterrumpidamente, detenido
+        o zombi. 
+        - Prioridad: Define el orden en que los procesos fueron programados para ejecutarse. 
+        - Tiempo en CPU: Indica la cantidad de tiempo que el proceso a consumido utilizando la CPU.
+        - Memoria asignada.
+        - Directorio de trabajo.
+        - Archivos abiertos.
+        - Señales.
+        - Hilos.
+        - Comando: el comando o programa que inicio el proceso.
+
+
+(b) Indique qué comandos se podrían utilizar para ver qué procesos están en ejecución en
+un sistema GNU/Linux.
+    EL comando es 'ps' que muestra una lista de procesos en el sistema o 'top' que muestra una lista interactiva de los
+    procesos en ejecucion. Por ultimo tenemos pstree que muestra los procesos en forma de arbol.
+
+
+(c) ¿Qué significa que un proceso se está ejecutando en Background? ¿Y en Foreground?
+    Que un proceso se ejecute en background significa que se esta ejecutando de manera independiente a la terminal o 
+    interfaz de usuario desde la que fue iniciado. En cambio, foreground significa esta directamente vinculado a la 
+    interfaz o terminal desde la que fue iniciado.
+
+
+(d) ¿Cómo puedo hacer para ejecutar un proceso en Background? ¿Como puedo hacer para
+pasar un proceso de background a foreground y viceversa?
+    Para inicar un proceso en background se le puede añadir '&' al final del comando. Para pasar un proceso de background
+    a foreground se puede ejecutar el comando 'fg' y para suspender un proceso de foreground y pasarlo al background
+    primero deberiamos uspender el proceso con el presionando Ctrl + Z y luego reanudarlo en segundo plano con el Comando
+    'bg'. 
+
+
+(e) Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.
+    El pipe nos permite comunicar dos procesos por medio de unpipe o tuberia desde la shell. El pipe conecta el stdout
+    del primer comando con el stdin del segundo. Ejemplo: ls | more. En este ejemplo se ejecuta el comando ls y la salida
+    del mismo es enviada a la entrada del comando more.
+
+
+(f) Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos
+de utilización.
+    Existe la redireccion destructiva '>' cuya finalidad es crear el archivo de destino si no existe o, si existe, 
+    truncarlo y escribir el nuevo contenido. La otra redireccion que existe es no destructiva '>>' cuya finalidad es 
+    crear el archivo de destino si no existe, y sino agregar la informacion al final.
+
+    Si tenemos un archivo ue dice hola.txt cuyo contenido es la palabra hola en
+    la primera linea. Si ejecutamos echo "Chau" > hola.txt, la primera linea se sobrescribira y ahora el archivo dira en
+    su primer linea "Chau". En cambio, si ejecutamos echo "Chau" >> hola.txt se escribira en la segunda linea la palabra
+    'hola'.
+
+
+(g) Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.
+(h) Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con
+el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
+- ps -> Muestra la linea de procesos que se esta ejecutando en la linea de comandos en ese momento. 
+    Parámetros comunes:
+        - ps aux: Muestra todos los procesos de todos los usuarios en formato detallado.
+        - ps -ef: Muestra los procesos con el formato estándar de UNIX, incluyendo PPID y PID.
+        - ps -p PID: Muestra información sobre un proceso específico utilizando su PID.
+
+- kill -> Envia señales a un proceso especifico para detenerlo o matarlo. 
+    Parámetros comunes:
+        - kill -9 PID: Envía la señal SIGKILL que termina el proceso de manera forzada.
+        - kill -l: Lista todas las señales disponibles que puedes enviar a los procesos.
+
+-pstree -> Muestra todos los procesos en forma de arbol.
+    Parámetros comunes:
+        - pstree -p: Muestra los PIDs junto con el nombre de los procesos.
+        - pstree -u: Muestra los nombres de usuario asociados con los procesos.
+
+- killall -> Envia señales a un conjunto de procesos que coinciden con el nombre del programa para detenerlos o matarlos.
+    Parámetros comunes:
+        - killall -9 nombre_proceso: Mata todos los procesos que coinciden con el nombre dado, usando la señal SIGKILL.
+        - killall -I nombre_proceso: Ignora mayúsculas y minúsculas al buscar el nombre del proceso.
+
+- top -> Muestra una lista interactiva de los procesos en ejecucion. 
+    Parámetros comunes:
+        - top -u usuario: Muestra solo los procesos de un usuario en particular.
+
+- nice -> Ajusta la prioridad con la que se ejecuta un proceso. 
+    Parámetros comunes:
+        - nice -n valor comando: Ejecuta un comando con el valor de prioridad especificado. 

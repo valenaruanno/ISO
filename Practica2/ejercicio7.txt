@@ -1,0 +1,29 @@
+Otros comandos de Linux (Indique funcionalidad y parámetros):
+(a) ¿A qué hace referencia el concepto de empaquetar archivos en GNU/Linux?
+    Empaquetar archivos significa agrupar varios archivos y directorios en un olo archivo, sin comprimirlos necesariamente,
+    para facilitar su almacentamiento, distribucion y transferencia.
+
+
+(b) Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4
+archivos y compare los tamaños de los mismos. ¿Qué característica nota?
+    *****REALIZAR 
+
+
+(c) ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la
+secuencia de comandos ejecutados.
+    - tar: Es la herramienta que empaqueta y comprime.
+    - -c: Crea un nuevo archivo tar.
+    - -z: Comprime el archivo usando gzip.
+    - -f: Especifica el nombre del archivo de salida.
+
+
+(d) ¿Pueden comprimirse un conjunto de archivos utilizando un único comando?
+    tar -cvzf archivos_comprimidos.tar.gz archivo1.txt archivo2.txt archivo3.txt archivo4.txt
+
+    
+(e) Investigue la funcionalidad de los siguientes comandos:
+tar
+grep
+gzip
+zgrep
+wc
