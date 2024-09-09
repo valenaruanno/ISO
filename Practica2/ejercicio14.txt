@@ -1,0 +1,43 @@
+14. Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente
+secuencia de pasos (considerando su orden de aparición):
+(a) Cree un directorio llamado logs en el directorio /tmp.
+    Comando: 'mkdir /tmp/logs'.
+
+
+(b) Copie todo el contenido del directorio /var/log en el directorio creado en el punto
+anterior.
+    Comando: 'cp -r /var/log/* /tmp/logs/'.
+    El comando -r copia recursivamente todo el contenido.
+
+
+(c) Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".
+    Comando: 'tar -cvf misLogs.tar -C /tmp logs'.
+    -c crea un archivo tar 
+    -f especifica el nombre del archivo tar 
+    - -C /tmp cambia el directorio de trabajo a /tmp antes de empaquetar logs, para que el archivo contenga el directorio con ese nombre directamente.
+
+
+(d) Empaquete y comprima el directorio creado en 1, el archivo resultante se debe llamar
+"misLogs.tar.gz".
+    Comando: 'tar -czvf misLogs.tar.gz -C /tmp logs'
+    -z complime el archivo utilizando gzip. 
+
+
+(e) Copie los archivos creados en 3 y 4 al directorio de trabajo de su usuario.
+    Comando para copiar el (c): 'cp misLogs.tar ~/'.
+    Comando para copiar el (d): 'cp misLogs.tar.gz ~/'.
+    '~' representa el directorio de trabajo del usuario, que tambien se pude mencionar como $home.
+
+
+(f) Elimine el directorio creado en 1, logs.
+    Comando: 'rm -r /tmp/logs'.
+
+
+(g) Desempaquete los archivos creados en 3 y 4 en 2 directorios diferentes.
+    ARCHIVOS CREADOS EN EL 3
+    Comando: 'mkdir /tmp/extract_tar'       //Con este comando creamos los directorios correspondientes
+    tar -xvf misLogs.tar -C /tmp/extract_tar        //'-x' extrae el contenido del archivo tar, '-f' especifica el archivo tar, '-C' cambia el directorio /tmp/extract_tar antes de extraer los archivos.
+
+    ARCHIVOS CREADOS EN EL 4
+    Comando: 'mkdir /tmp/extract_tar_gz'        //Con este comando creamos los directorios correspondientes 
+    'tar -xzvf misLogs.tar.gz -C /tmp/extract_tar_gz'
