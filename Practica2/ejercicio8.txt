@@ -1,0 +1,22 @@
+8. Indique qué acción realiza cada uno de los comandos indicados a continuación considerando
+su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo
+de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el
+que se logueó). En caso de no poder ejecutarse el comando, indique la razón:
+l s −l > prueba  //Lista los archivos y directorios en formato detallado y los redirecciona a un archivo llamado prueba.
+ps > PRUEBA      // Lista los procesos en ejecucion del usuario y los redirecciona al archivo PRUEBA.
+chmod 710 prueba    // cambia los permisos del archivo prueba. Con el 7 orotga permisos de lectura, escritura y ejecucion para el propietario. Con el 1 otorga los permisos de ejecucion
+al grupo y con el 0 no otorga ningun permiso. 
+chown root : root PRUEBA //No es posible ejecutar este comando ya que no se puede acceder a : ni root por que no existen.
+chmod 777 PRUEBA        //Le otorga los permisos completos de archivos o directorios a todos los usuarios.
+chmod 700 /etc/passwd   //No se puede cambiar los permisos de /etc/passwd
+passwd root             //No se puede ver ni cambiar la informacion de la contraseña para root
+rm PRUEBA               //Elimina el archivo llamado PRUEBA
+man / etc /shadow       //No se puede abrir /etc/shadow
+find / −name ∗. conf    //Busca todos los archivos con la extension .conf en el sistema desde la raiz
+usermod root −d /home/newroot −L //Se utiliza para modificar la cuenta de usuario root. Con usermod modificamos las propiedades de una cuenta de usuario.
+    -d /home/newroot cambia el nombre del directorio /home t -L bloquea la cuenta de usuario por lo que root non va a poder iniciar sesion.
+cd / root           //Permiso denegado.
+rm ∗                //Intenta borrar los directorios de /home sin exito.
+cd / etc            //Ingresa al directorio /etc.
+cp ∗ /home −R       //Intenta copiar el contenido de * y pegarlo en el directorio destino que es /home directorios sin exito.
+shutdown            //Apaga o reinicia el sistema de forma segura.

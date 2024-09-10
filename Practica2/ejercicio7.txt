@@ -22,8 +22,8 @@ secuencia de comandos ejecutados.
 
     
 (e) Investigue la funcionalidad de los siguientes comandos:
-tar
-grep
-gzip
-zgrep
-wc
+    - tar: Se utiliza para archivar y comprimir archivos y directorios.
+    - grep: Se utiliza para buscar texto dentro de archivos o flujos de datos.
+    - gzip: Se utiliza para comprimir archivos, reduciendo su tamaño.
+    - zgrep: Es una variante del grep, que se utiliza para buscar texto, pero dentro de archivos compimidos con gzip.
+    - wc: Se utiliza para contar el numero de lineas, palabras o bytes en un archivo o flujo de datos.

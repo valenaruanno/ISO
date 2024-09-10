@@ -1,0 +1,58 @@
+10. Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes ac-
+ciones:
+(a) Ingrese al sistema como usuario “root”
+    Comando 'su'
+
+(b) Cree un usuario. Elija como nombre, por convención, la primer letra de su nombre seguida de su apellido. Asígnele una contraseña de acceso.
+    - sudo adduser <>.
+
+
+(c) ¿Qué archivos fueron modificados luego de crear el usuario y qué directorios se crearon?
+    Los archivos modificados fueron:
+        - '/etc/passwd' que es el archivo que contiene la informacion basica de los usuarios.
+        - '/etc/shadow' que es el archivo que guarda las contraseñas de los usuarios de forma cifrada.
+        - '/etc/group' que es el archivo que contiene informacion sobre los grupos del sistema.
+        - '/etc/gshadow' que almacena la ifnormacion de seguridad y contraseñas de grupos en formato cifrado.
+    Los archivos que se crearon son: 
+        - '/home/usuario' que es el directorio personal del usuario.
+        - Otros archivos dependiendo de la configuracion del sistema como puede ser '/var/mail/usuario'.
+
+
+(d) Crear un directorio en /tmp llamado cursada2017
+    mkdir /tmp/cursada2017
+
+
+(e) Copiar todos los archivos de /var/log al directorio antes creado.
+    cp -r /var/log/*  /tmp/cursada2017      //Pase todos los archivos que tenian permiso de esccritura
+
+
+(f) Para el directorio antes creado (y los archivos y subdirectorios contenidos en él) cambiar el propietario y grupo al usuario creado y grupo users.
+    sudo chown valen:users /tmp/cursada2017
+
+(g) Agregue permiso total al dueño, de escritura al grupo y escritura y ejecución a todos los demás usuarios para todos los archivos dentro de un directorio en forma recursiva.ç
+    sudo chmod -R u=rwx,g=rw,o=wx /ruta/al/directorio
+
+
+(h) Acceda a otra terminal virtual para loguearse con el usuario antes creado.
+    ctrl + alt + f4
+
+
+(i) Una vez logueado con el usuario antes creado, averigüe cuál es el nombre de su terminal.
+    echo $0
+
+
+(j) Verifique la cantidad de procesos activos que hay en el sistema.
+    ps aux | wc -l
+
+
+(k) Verifiqué la cantidad de usuarios conectados al sistema.
+    who | wc -l 
+
+
+(l) Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.
+    sudo -i 
+    write usuario 
+    "El sistema se apagara" crtl + d para enviar 
+
+
+(m) Apague el sistema.

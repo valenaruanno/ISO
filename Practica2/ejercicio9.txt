@@ -1,0 +1,43 @@
+9. Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes ac-
+ciones:
+(a) Terminar el proceso con PID 23.
+    Comando 'kill 23'
+
+(b) Terminar el proceso llamado init o systemd. ¿Qué resultados obtuvo?
+    Comando 'kill 1'. El id de proceso es 1 ya que es el primer proceso que se inicia. Al ejecutar este comando se podria apagar o reiniciar el equipo.
+
+(c) Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”
+    Comando 'find *.conf'
+(d) Guardar una lista de procesos en ejecución el archivo /home/<su nombre de usua-
+rio>/procesos
+    Comando 'ps > /home/valen/procesos' y para chequear que se escribieron uso 'cat /home/valen/p`rocesos'
+
+(e) Cambiar los permisos del archivo /home/<su nombre de usuario>/xxxx a:
+                                        // rwx (read, write, execution)
+Usuario: Lectura, escritura, ejecución           4      2       1       = 7        
+Grupo: Lectura, ejecución                        4      -       1       = 5
+Otros: ejecución                                 -      -       1       = 1
+    El comando a ejecutar es 'chmod 751 /home/valen/xxxx'
+
+(f) Cambiar los permisos del archivo /home/<su nombre de usuario>/yyyy a:
+                                        // rwx (read, write, execution)
+Usuario: Lectura, escritura.                      4     -       1       = 5
+Grupo: Lectura, ejecución                         4     -       1       = 5
+Otros: Ninguno                                    -     -       -       = 0
+    El comando a ejecutar seria 'chmod 550 /home/valen/xxxx'
+
+(g) Borrar todos los archivos del directorio /tmp
+    Comando 'rm /tmp/*'
+
+
+(h) Cambiar el propietario del archivo /opt/isodata al usuario iso2010
+    Comando 'sudo shown iso2010 /opt/isodata 
+
+(i) Guardar en el archivo /home/<su nombre de usuario>/donde el directorio donde
+me encuentro en este momento, en caso de que el archivo exista no se debe eliminar
+su contenido anterior.
+    Comando 'pwd >> /home/valen/procesos'
+
+
+    // > redirige la salida de un comando al archivo especificado (puede sobrescribir datos existentes).
+    // >> redirige la salida de un comando al archivo especificado, pero en lugar de sobrescribir el archivo, añade la nueva salida al final del archivo.

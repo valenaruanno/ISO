@@ -1,0 +1,24 @@
+mkdir iso               // crea el directorio iso 
+cd ./iso; ps > f0       // "cd ./iso" cambia el directorio actual a ./iso y "ps > f0" redirige la salida del comando ps, que muestra informacion sobre
+                            los procesos que estan en ejecucion en el sistema al archivo f0 que es creado y si existia lo sobrescribe.
+
+ls > f1                 // redirige la salida de ls, que tiene la informacion sobre los procesos que se estan ejecuntando en el sistema
+                            al archivo f1 que si no esta creado lo crea y sino lo sobreescribe.
+
+cd /                    // cambia del directorio de trabajo actual al directorio raiz del sistema de archivos.
+
+echo $HOME              //Muestra el texto /HOME en la salida de la terminal
+
+ls −l $> $HOME/iso/ls   //
+cd $HOME; mkdir f2      //acedo a el directorio personal y creo el directorio f2
+l s −ld f2              // me fijo que permisos tiene la el directorio f2
+chmod 341 f2            // le saco el permiso de lectura al propietario, le dejo solo el permiso de lectura a los grupos y le dejo solo el permiso de ejecucion a otros usuarios.
+touch dir               //crea un archivo vacio llamado dir 
+cd f2                   //accede al directorio f2
+cd ~/ i s o             //accede al directorio /iso
+pwd >f3                 //envia la salida del directorio de trabajo actual al archivo f3
+ps | grep ' ps ' | wc −l >> . . / f2 / f3
+chmod 700 . . / f2 ; cd . .
+find . −name etc /passwd
+find / −name etc /passwd
+mkdir e j e r c i c i o 5
