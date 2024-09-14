@@ -44,3 +44,80 @@
     invoco al script. Por parametros puede recibir valores (del 0 al 255) que significan los codigos de salida, el 0 indica que el script se ejecuto 
     sin errores, es decir, exitosamente. En cambio, los codigos distintos de 0 indican que hubieron errores. 
 
+
+6- Las operaciones que se peuden realizar para e comando de evaluacion de expresiones son: operaciones aritmeticas, de comparacion y de manipulacion 
+    de cadenas.
+
+7-  Tipos de operaciones:
+    - test -e archivo.txt: retorna si el archivo existe o no. 
+    - test -f archivo.txt: retorna si el archivo existe y no es regular, es decir no es directorio.
+    - test -d directorio: retorna si el archivo existe y es un directorio.
+    - test -x script.sh: retorna si el archivo es ejecutable.
+    - test -r archivo.txt: retorna si el archivo es legible.
+    - test -w archivo.txt: retorna si el archivo es escribible.
+    - test -s archivo.txt: retorna si el archivo existe y no esta vacio. 
+    - test -n "hola": retorna si la longitud de la cadena no es cero.
+    - test -z "": retorna si la longitud de la cadena es cero. 
+    - test "hola" = "hola": retorna si las cadenas son igual.
+    - test "hola" != "mundo": retorna si las cadenas son diferentes. 
+    - test 5 -eq 5: retorna si los numeros son iguales.
+    - test 5 -ne 3: retorna si los numeros son distintos. 
+    - test 5 -gt 3: retorna true si n1 es mayor a n2.
+    - test 5 -ge 5: retorna si n1 es >= a n2.
+    - test 3 -lt 5: retorna si n1 < a n2.
+    - test 3 -le 5: retorna si n1 <= a n2.
+
+
+8- 
+    - Estructura del if: 
+            if [ condición ]; then
+
+            else 
+
+            fi 
+        //Para hacer un elseif escribo "elif"
+
+    - Estructura del case: 
+            case $var in 
+                patron1)
+
+                ;;
+                patron2)
+
+                ;;
+                *)
+
+            esac
+
+    - Estructura del while:
+            while []; do 
+
+            done
+
+    - Estructura del for:
+            for variable in lista; do 
+
+            done 
+
+    - Estructura del select: 
+            select variable in lista; do 
+
+                break 
+            done 
+
+
+9- La sentencia break corta la ejecucion de un bucle y el continue se utiliza para saltar el resto de las instrucciones dentro de la iteracion actual 
+    y pasar directamente a la siguiente iteracion del bucle. Cuando el break tiene un parametro indica la cantidad de niveles de bucles del cual debe 
+    salir. En cambio, cuando un continue tiene un parametro, este indica en que nivel del bucle debe reiniciarse la siguiente iteracion. 
+
+10- Los dos tipos que existen son los string y los arrays. Este lenguaje no es fuertemente tipado por lo que no es necesario declarar de que tipo sera 
+    la variable que estamos declarando. Los arreglos se declaran de la siguiente forma: 
+
+                arreglo=(1 ""dos" 3) Separando las posiciones del arreglo con espacios. 
+
+
+
+
+
+
+
