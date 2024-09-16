@@ -1,0 +1,45 @@
+13)
+    a- 
+    #!/bin/bash
+
+    calcular_cuadrado() {
+    echo $(($1 * $1))
+    }
+
+    for i in {1..10}
+    do
+        echo "El número es $i y su cuadrado es $(calcular_cuadrado $i)"
+    done
+
+    b- 
+    #!/bin/bash
+    echo "Ingrese que operacion desea realizar: 1- Listar. 2- Donde Estoy. 3-QuienEsta"
+    read opcion
+    case $opcion in
+        1)
+            echo "$(15)"
+        ;;
+        2)
+            echo "$(pwd)"
+        ;;
+        3)
+            echo "$(whoami)"
+        ;;
+        *)
+            echo "La opcion ingresada no se encuentra dentro de las disponibles" 
+    esac
+
+    c- 
+    #!/bin/bash
+    nombre=$1
+    if [ -d $nombre ]; then 
+        if [ -d $nombre ]; then 
+            echo "El archivo existe y es un direcctorio"
+        else 
+            mkdir $nombre 
+            echo "El archivo existe, no era un directorio pero ya fue creado."                  //No me funciona el mkdir 
+        fi 
+    else 
+        touch $nombre 
+        echo "El archivo enviado como parametro no existe, pero ya fue creado."
+    fi 

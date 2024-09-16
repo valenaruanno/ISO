@@ -1,0 +1,43 @@
+1- El shell scripting es el proceso de escribir comandos o scripts para automatizar tareas en un sistema operativo mediante un shell. El shell
+    scripting esta orientado a tareas repetitivas, instalacion y configuracion de software, monitorizacion de servidores y sistemas, y la gestion
+    de procecsos y ejecucion de comandos en lote. Los scripts no son compilados sino que son interpretados, osea que, se ejecutan 
+    directamente por un interprete. 
+
+2- El comando echo se utiliza para mostrar en pantalla un mensaje y e; read es utilizado para permitir que el usuario ingrese informacion. Los 
+    comentarios dentro de un script se realizan mendiante el comando #. Las variables pueden ser solo de tipo string o arrays y declaran 
+    indicando su numero el cual no puede comenzar con un numero y seguido (sin espacios) se pone el signo de igual y el valor. Ademas podemos 
+    hacer referencia de la siguiente manera: $(nombre_variable).
+
+
+
+3- c) Se visualiza el pedido de ingreso del nombre y apellido, y luego se muestran los distintos echos.
+
+   d) Significa que mediante los backquotes se puede obtener el resultado de ejecutar el comando.
+
+   e) #!/bin/bash
+    # Comentarios acerca de lo que hace el script
+    # Siempre comento mis scripts, si no hoy lo hago
+    # y mañana ya no me acuerdo de lo que quise hacer
+    echo "Introduzca su nombre y apellido:"
+    read nombre apellido
+    echo "Fecha y hora actual:"
+    date
+    echo "Su apellido y nombre es:
+    echo "$apellido $nombre"
+    echo "Su usuario es: `whoami`"
+    echo "Su directorio actual es: $(pwd)" 
+    echo "El contenido del directorio actual es: $(ls)"
+    echo "El espacion libre en disco es: $(df)"
+    echo "Ingrese la fecha de nacimiento"
+    read fecha
+    echo "La fecha de nacimiento de $nombre es: $fecha"
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+4- Para acceder a los parametros enviados a un script utilizamos el signo $ seguido del numero de parametro que queremos obtener. Los parametros 
+    son enviados cuando realizamos ./nombre_script parametro1 parametro2. 
+        - $# tiene el numero de parametros que se le han pasado al script.
+        $* representa todos los parametros pasados a un script como una cadena.
+        $? contiene el estado de salida del ultimo comando ejecutado
+        $HOME es una variable del entorno que contiene la ruta al directorio personal del usuario que esta ejecutando el script.
+    
+5- El comando exit finaliza la ejecucion de un script o sesion de un shell y devuelve un codigo de salida al sistema operativo o al proceso que 
+    invoco al script. Por parametros puede recibir valores (del 0 al 255) que significan los codigos de salida, el 0 indica que el script se ejecuto 
+    sin errores, es decir, exitosamente. En cambio, los codigos distintos de 0 indican que hubieron errores. 
+
+
+6- Las operaciones que se peuden realizar para el comando de evaluacion de expresiones son: operaciones aritmeticas, de comparacion y de manipulacion 
+    de cadenas.
