@@ -1,0 +1,13 @@
+16) 
+    #!/bin/bash
+    if [ -z $1 ]; then 
+        echo "Debes ingresar una extension para armar el reporte"
+    else 
+        for user_dir in /home/*, do 
+            usuario=$(basename "$user_dir")
+            if [ -d "$user_dir" ]; then         #chequeo qye $user_dir sea un directorio
+                cantidad=find /home/$usuario -type f -name "*/.$1" | wc -l
+                echo $usuario $cantidad >> reporte.txt
+            fi 
+        done 
+    fi 

@@ -36,10 +36,47 @@
         if [ -d $nombre ]; then 
             echo "El archivo existe y es un direcctorio"
         else 
-            mkdir $nombre 
-            echo "El archivo existe, no era un directorio pero ya fue creado."                  //No me funciona el mkdir 
+            echo "El archivo existe, pero no es un directorio."                  //No me funciona el mkdir 
         fi 
     else 
-        touch $nombre 
+        mkdir $nombre 
         echo "El archivo enviado como parametro no existe, pero ya fue creado."
     fi 
+
+
+14) 
+    #!/bin/bash
+    echo "Indique con (1) si el agregado ira atras o (2) en caso contrario"
+    read opc 
+    if [ $opc -eq 1 ]; then 
+        for file in "$1"/*; do 
+            $file -a $2
+        done 
+    else 
+        for file in "$1"/*; do 
+            $file -b $2
+        done 
+    fi 
+                    //NO FUNCIONA 
+
+
+15) El comando cut imprime las partes seleccionadas de cada linea de un archivo por la salida estandar.
+    Los parametros que puede recibir son: 
+    
+    - --bytes=LISTA : selecciona solo estos bytes.
+    - --characters=LISTA : selecciona solo esos caracteres.
+    - --delimiter=DELIM : emplea "DELIM" como separador en algun lugar de tabulaciones.
+    - --fields=LISTA : selecciona solo estos campos.
+    - --complement : complementa los caracteres, bytes o campos seleccionados.
+    - --output-delimiter=CADENA: emplea "Cadena" como delimitador de  salida.
+    - --zero-terminated : las lineas se delimitan con null en lugar de nueva linea.
+    - --help : muestra la ayuda y finaliza.
+    - --version : muestra la version del programa y finaliza.
+
+
+
+
+
+
+
+
