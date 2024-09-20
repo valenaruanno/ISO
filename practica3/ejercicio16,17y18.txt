@@ -5,9 +5,14 @@
     else 
         for user_dir in /home/*, do 
             usuario=$(basename "$user_dir")
-            if [ -d "$user_dir" ]; then         #chequeo qye $user_dir sea un directorio
-                cantidad=find /home/$usuario -type f -name "*/.$1" | wc -l
-                echo $usuario $cantidad >> reporte.txt
-            fi 
+                cantidad=find /user_id -type f -name "*/.$1" | wc -l
+                echo $user_id $cantidad >> reporte.txt
         done 
     fi 
+
+
+
+    // Validar parametros siempre en los script (cantidad y si existe el directorio o no). En caso de no pasar la validacion salir con exit 1
+
+
+    17) 

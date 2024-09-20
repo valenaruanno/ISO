@@ -50,11 +50,11 @@
     read opc 
     if [ $opc -eq 1 ]; then 
         for file in "$1"/*; do 
-            $file -a $2
+            mv $file -a $2
         done 
     else 
         for file in "$1"/*; do 
-            $file -b $2
+            mv $file -b $2
         done 
     fi 
                     //NO FUNCIONA 
