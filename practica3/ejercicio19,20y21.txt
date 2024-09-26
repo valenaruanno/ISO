@@ -1,0 +1,45 @@
+19) 
+
+20) 
+#!/bin/bash
+if [ -z $# ]; then
+    exit 1
+else
+    touch pila
+    case $1 in
+        "push")
+            echo "$2" >> pila
+        ;;
+        "pop")
+            sed -i '$d' pila
+        ;;
+        "length")
+            echo $cat pila | wc -1)
+        ;;
+        "print")
+            cat pila
+        ;;
+        *)
+            exit 1
+        ;;
+    esac
+fi
+
+21)
+
+#!/bin/bash
+productoria (){
+    i=0
+    total=${num [$i]}
+    i=$(expr $i + 1)
+    while [ $i -1 $2]; do
+        total=$(expr $total \* ${num[$i]}) i=$(expr $i + 1)
+        i=$(expr $i + 1)
+    done
+    echo "El resultado de la multiplicacion del vector es: " $total
+    return $total
+}
+num (10 3 5 79354)
+longitud=${#num[@]}
+productoria num $longitud
+exit 1

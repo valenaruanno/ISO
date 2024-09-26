@@ -13,6 +13,20 @@
 
 
     // Validar parametros siempre en los script (cantidad y si existe el directorio o no). En caso de no pasar la validacion salir con exit 1
-
+    // cuando hago un echo con variables dentro debo ponerlas entre ""
 
     17) 
+    #!/bin/bash
+    archivos=$(ls) # Lista de archivos en el directorio actual
+    > archivos2    # Limpia el archivo de salida "archivos2"
+
+    for a in $archivos; do
+        new=$(echo "$a" | tr -d 'a' | tr 'a-zA-Z' 'A-Za-z') # Aplica los comandos tr correctamente
+        echo "$new" >> archivos2 # Guarda el resultado en archivos2
+    done
+
+    echo "$(cat archivos2)" # Muestra el contenido de archivos2
+    exit 0 
+    
+    18)
+    

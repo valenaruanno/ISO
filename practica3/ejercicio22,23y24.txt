@@ -1,0 +1,23 @@
+22) 
+#!/bin/bash
+is_par () {
+    res=$(expr $1 % 2)
+    if [ $res -eq 0 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+num=(2 3 6 4 7 10)
+i=0
+dimension=${#num[@]}
+impares=0
+while [ $i -lt $dimension ]; do
+    if is_par ${num [$i]}; then
+        echo ${num [$i]}
+    else
+        impares=$(expr $impares + 1)
+    fi
+    i=$(expr $i + 1)
+done
+echo "La cantidad de impares fueron " $impares
