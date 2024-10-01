@@ -21,3 +21,19 @@ while [ $i -lt $dimension ]; do
     i=$(expr $i + 1)
 done
 echo "La cantidad de impares fueron " $impares
+
+23)
+
+
+24)
+#!bin/bash 
+
+vector1=(1 80 65 35 2)
+vetor2=(5 98 3 41 8)
+
+i=0
+while [ $i -lt $(expr ${#vector[@]}) ]; do
+    echo "La suma de los elementos de la posicicion $i de los vectores es $(expr ${vector1[$1]} + ${vector2[$i]})"
+    i=$(expr $i + 1)
+done 
+exit 0
