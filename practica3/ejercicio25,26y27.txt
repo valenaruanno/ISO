@@ -1,7 +1,38 @@
 25) 
 
+#!/bin/bash
+if [ $# -eq 0 ]; then 
+	exit 1
+fi
 
-26
+usuarios=()
+for i in $(cat /etc/passwd | cut -d: -f1); do 
+	usuario [${#usuario[*]}]=$i
+done
+case $1 in
+	"-b")
+		if [ $# -lt 2 ]; then
+			exit 1
+		fi
+		if [ $2 -lt ${#usuario [*]} ]; then 
+			echo ${usuario [$2]}
+		else
+			echo "El elemento de la posicion $2 no existe"
+		fi
+	;;
+	"-l")
+		echo "La dimension del arreglo es $ {#usuario[*]}"
+	;;
+	"-i")
+		echo "${usuario[*]}"
+	;;
+	*)
+		echo "La opcion ingresada es incorrecta"
+	;;
+esac 
+exit 0
+
+26)
 
 #!/bin/bash
 
@@ -30,3 +61,62 @@ done
 
 echo "La cantidad de archivos inexistentes en el sistema es \"$cant\""
 exit 0
+
+
+27)
+
+#!/bin/bash 
+
+inicializar (){
+	array=()
+	return 0
+}
+
+agregar_elem (){
+	if [ $# -lt 1 ]; then 
+		return 1
+	else 
+		array[${#array[*]}]=$1
+		return 0
+	fi
+}
+
+eliminar_elem (){
+	if [ $# -lt 1 ]; then 
+		"La cantidad de parametros requeridos no es la correcta"
+		valor=1
+	else 
+		if [ $1 -lt ${#array[*]} ]; then 
+			unset array[$1]
+			valor=0
+		else 
+			echo "La posicion enviada no se encuentra en el rango del arreglo"
+			valor=1
+		fi
+	fi
+	return $valor
+}
+
+longitud (){
+	echo "La longitud del arreglo es ${#array[@]}"
+	return 0
+}
+
+imprimir (){
+	echo "${array[*]}"
+	return 0
+}
+
+inicializar_Con_Valores (){
+	if [ $# -eq 3 ]; then 
+		i=0
+		while [ $i -lt $2 ]; do 
+			array[$i]=$2
+			i=$((i + 1))
+		done 
+		valor=0
+	else 
+		valor=1
+	fi
+	return $valor 
+}
