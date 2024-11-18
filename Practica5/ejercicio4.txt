@@ -1,0 +1,2 @@
+a- DEFINICION DE FRAGMENTACION INTERNA Y EXTERNA.
+b- La fragmentacion externa se puede solucionar a partir de la compactacion, pero este metodo es muy costoso.

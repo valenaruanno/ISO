@@ -1,0 +1,13 @@
+a- Paginacion
+    La memoria se divide en marcos que son porciones de igual tamaño y el espacio de direcciones
+    de un proceso se divide en paginas que son porciones de igual tamaño, entonces el SO 
+    mantiene una tabla de paginas para cada proceso, la cual contiene el marco donde se encuentra
+    cada pagina. 
+
+    //En cada marco se va a guardar una pagina 
+
+b- Las estructuras adicionales que debe poseer el SO es una tabla de paginas del proceso.
+
+c- GRAFICO EN LA EXPLICACION PRACTICA
+
+d- Se puede producir fragmentacion interna debido a que un marco puede ser mas chico que una pagina. 

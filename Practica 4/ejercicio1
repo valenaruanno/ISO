@@ -1,8 +1,0 @@
-a- Un programa es estático, no tiene program counter y existe desde que se lo edita hasta que se lo borra. En cambio, un proceso 
-    es un programa en ejecucion, es decir que es dinamico, tiene un program counter y existe desde que se lo ejecuta hasta que 
-    termina su ejecucion.
-
-b- El tiepo de retorno es el tiempo que transcurre desde que el proceso llega al sistema hasta que se completa su ejecucion. 
-    En cambio, el tiempo de espera es el tiempo que el proceso pasa sin ejecutarse en el sistema.
-
-c- El tiempo promedio de retorno para un lote de jobs es el promedio del total de tiempo de retorno de todos los jobs y el tiempo promedio de espera para un lote de jobs es el promedio del total de tiempo de espera de todos los jobs. 

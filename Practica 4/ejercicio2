@@ -1,0 +1,101 @@
+2)
+a- 
+    i. top -> muestra en tiempo real los procesos en 
+    ejecucion y el uso de recursos. Permite monitorear 
+    y ordenar los procesos por uso de recursos.
+
+    ii. htop -> Similar al top pero con una interfaz de 
+    usuario mas amigable y con soporte para navegaciones
+    mas intuitivas. Permite ordenar procesos, matarlos
+    y configurar su prioridad.
+
+    iii. ps -> Muestra los procesos en ejecucion.
+
+    iv. pstree -> Muestra los procesos en ejecucion en
+    forma de arbol, con jerarquias para mostrar padres
+    e hijos. 
+
+    v. kill -> Envia la señal a un proceso para 
+    detenerlo o eliminarlo.
+
+    vi. pgreppkillkillall
+
+    vii. killall -> Mata todos los procesos con 
+    un nombre específico.
+
+    viii. renice -> Cambia la prioridad de un proceso
+    en ejecucion. 
+
+    ix. xkill -> Utilizado en entornos gráficos para 
+    matar una aplicación haciendo clic en su ventana.
+
+    x. atop -> Similar a top, pero muestra una visión 
+    más completa del sistema y registra información 
+    del uso de recursos con el tiempo. Incluye 
+    estadísticas detalladas de CPU, memoria, disco, 
+    red, y permite ver las tendencias de uso de 
+    recursos en sesiones anteriores.
+
+b- Lo que hace este codigo es imprimir comienzo y luego
+crear 3 hijos, que a su vez van a crear hijos cada vez
+que el padre cree. Al finalizar el proceso padre, todos
+imprimirar "Proceso".
+    1- 8 lineas con la palabra "Proceso"
+    2- Si.
+
+c-  
+    1- Por consola se mostrara "Proceso /n 1"
+    2- Todas las lineas tendran el mismo valor.
+    3- Aparecera "Proceso 1" 8 veces.
+
+d- 
+    1- La función pipe(fd) crea el pipe, y fd es un array 
+que contiene dos descriptores de archivo:
+fd[0]: Descriptor de archivo para lectura.
+fd[1]: Descriptor de archivo para escritura.
+Proceso padre:
+    - Cierra fd[0] porque solo va a escribir en el pipe.
+    - Escribe el mensaje en fd[1] usando write().
+    - Luego, cierra fd[1] después de escribir para 
+    indicar que no enviará más datos.
+Proceso hijo:
+    - Cierra fd[1] porque solo va a leer del pipe.
+    - Lee el mensaje desde fd[0] usando read() y lo 
+    almacena en el buffer.
+    - Finalmente, imprime el mensaje recibido y cierra 
+    fd[0].
+
+    2- En C un pipe se crea mediante la funcion pipe().
+
+    3- Para crear un pipe tengo que pasar como parametro
+    fd que es un array donde se guardaran los
+    descriptores.
+
+    4- Los pipes permiten una comunicacion interporcesos.
+    La misma es una comunicacion unidireccional donde
+    un proceso puede escribir un mensaje y otro leerlo.
+
+3)
+    First Come First Served -> Cuando hay procesos 
+        para ejecutar selecciona el mas viejo. El mismo
+        no favorece ningun tipo de procesos pero podemos decir que los CPU/Bound terminan al comenzar su primer rafaga, mientras que los I/O bound no. Es no apropiativo.
+
+    Shortest Job First -> Selecciona el proceso con 
+        la rafaga mas corta.Es no apropiativo y favorece a los procesos cortos ya que los largos pueden sufrir inanicion.
+
+    Round Robin -> Es un algoritmo FIFO donde cada 
+        proceso tiene un tiempo para utilizar el 
+        procesador (quantum). Si los procesos son cortos, este agoritmo no es favorable.
+
+    Prioridades -> Cada proceso tiene un valor asociado
+        que representa su prioridad, cuanto menor es
+        mayor prioridad tiene. Es un algoritmo apropiativo o no dependiendo de si el proceso es lagor y la prioridad es alta.
+
+4) 
+    a- El timer fijo es una variante del RR donde el contador se inicializa en Q cuando su valor es 0, donde Q es compartido entre procesos. Mientras que el timer variable del RR es una variante donde el contador se inicializa en Q cada vez que el proceso es asignado a la CPU.
+    Ejemplos: con el timer variable, cuando un proceso se esta ejecutando y ocurre un evento de E/S, al devolverle la CPU al proceso el Q se va a reiniciar.
+    Con el timer fijo, si el Quantum no se llega a consumir con un proceso, el entrante va a recibir el quantum restante y va a ser expulsado de la CPU cuando se le termine.
+
+    En timer fijo el cuantum es definido en la configuracion del SO o en el planificador. En timer variable el quantum es definido en la estructura de control de cada proceso.
+
+5- 

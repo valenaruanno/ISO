@@ -1,0 +1,4 @@
+Las similitudes son que ambas dos dividen la memoria de manera fija y que en ambas 
+se puede producir fragmentacion interna y la diferencia es que en la particion fija 
+se guarda un proceso, mientras que en los marcos de paginacion se guarda el espacio 
+de direcciones de un proceso. 

@@ -1,0 +1,22 @@
+2- a)
+Pariciones fijas: La memoria se divide en partes fijas donde en cada una se coloca un proceso 
+    a partir de algun criterio: 
+        - First Fit. 
+        - Best fit.
+        - Worst fit. 
+        - Next fit.
+    Las mismas generan fragmentacion interna, es decir, partes de la particion quedan sin utilizar
+
+Partiticiones dinamicas: Las particiones varian en tamaño y numero. Las mismas alojan un proceso 
+    y cada una se genera de forma dinamica adaptandose al tamaño del proceso.
+    Genera fragmentacion externa, es decir, quedan huecos en la memoria a medida que los procesos 
+    finalizan. Estos huecos puede que no se encuentren de manera contigua por lo que puede darse 
+    el caso que tengamos memoria disponible para un proceso y que no la podamos utilizar.
+
+b) En el caso de las particiones fijas el SO debe disponer del tamaño y numero de particiones,
+    el estado de cada particion y la informacion de los procesos asignados.
+    En cambio, en el caso de las particiones dinamicas, el SO debe disponer de la tabla de 
+    particiones, los registros libres y ocupados, el algoritmo de asignacion de memoria e 
+    informacion de procesos asignados. 
+
+c) PEGAR CUADRO EXPLICACION PRACTICA 5

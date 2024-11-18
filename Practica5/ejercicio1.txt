@@ -1,0 +1,4 @@
+1-
+Direccion Logica o virtual: es una direccion que abstrae una direccion fisica.
+Direccion Fisica: Es una direccion real, con la que se accede efectivamente a la memoria.
+
