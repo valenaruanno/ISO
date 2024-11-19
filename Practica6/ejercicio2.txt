@@ -1,0 +1,14 @@
+E/S Programada: El procesador controla directamente la transferencia de datos entre los dispositivos de E/S y la memoria principal mediante instrucciones
+    especificas que chequean el estado del dispositivo (este mecanismo se denomina polling). Por otra parte la CPU espera a que el dispositivo este 
+    preparado para enviar o recibir datos.
+
+E/S dirigida por interrupciones: Una vez que un dispositivo quiere enviar o recibir informacion genera una interrupcion para notificar al procesador. La CPU
+    puede realizar otras operaciones mientras que el dispositivo realiza su operacion y solo interviene cuando este lo requiere. 
+    El proceso que se realiza puede describirse como:
+        - El dispositivo envia una interrupcion.
+        - La CPU detiene la tarea que esta realizando y salta al manejador de interrupciones.
+        - El manejador procesa la solicitud de E/S.
+        - Una vez completada la operacion, la CPU reanuda su tarea.
+
+E/S con DMA: El DMA es un dispositivo que se encarga de gestionar la transferencia de datos entre los dispositivos E/S y la memoria principal sin intervencion
+    constante de la CPU. Una vez terminada la transferencia, el DMA genera una interrupcion para notificar a la CPU. 

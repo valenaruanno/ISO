@@ -1,0 +1,10 @@
+Las metas que persigue el SO son:
+    - Eficiencia: optimizar el uso de los dispositivos E/S para maximizar el rendimiento general del sistema sin sobrecargar el SO.
+    - Abstraccion: proveer una interfaz uniforme para los dispositivos E/S, ocultando las complejidades del hardware especifico.
+    - Concurrencia: permitir que multiples procesos realicen E/S de fomra simultanea sin interferir entre si. 
+    - Proteccion y seguridad: prevenir que un proceso acceda a dispositivos E/S que no les corresponda o interfiera con otros procesos. 
+    - Escalabilidad: ser capaz de gestionar una cantidad creciente de dispositivos de E/S sin degradar el rendimiento. 
+    - Comparticion: permitir que varios procesos compartan dispositivos E/S de forma eficiente y ordenada. 
+    - Flexibilidad y extensibilidad: permitir que nuevos dispositivos de hardware se integren facilmente al sistema. 
+    - Confiabilidad: asegurar que las operaciones de E/S se realicen correctamente incluso en caso de errores del dispositivo o fallos en el hardware.
+    

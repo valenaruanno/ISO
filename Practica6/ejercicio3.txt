@@ -1,0 +1,6 @@
+E/S mapedad: es una tecnica donde los registros de control y de datos de los dispositivos de E/S estan mapeados en el mismo espacio de direcciones que la 
+    memoria principal. Pos su lado, la CPU accede a los dispositivos de E/S utilizando las mismas instrucciones que emplea para acceder a la memoria (load 
+    y store). Esto lo que hace es permitir unificar el acceso a la memoria y a los dispositivos, simplificando el diseño del procesador.
+
+E/S aislada: en esta tecnica los dispositivos de E/S tienen un espacio de direcciones separado del de la memoria principal y la CPU utiliza instrucciones
+    especiales para acceder a los dispositivos de E/S, como IN y OUT.

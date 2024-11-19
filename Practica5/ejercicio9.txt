@@ -1,0 +1,10 @@
+a) La segmentacion es una tecnica que divide el espacio de memoria de una programa en bloques llamados segmentos que tienen tamaños variables segun la 
+    necesidad del programa.
+
+b) Las estructuras adicionales que debe poseer el SO son:
+    - Tabla de segmentos: cada proceso tiene una que contiene la siguiente informacion -> base, limite, permisos y estado.
+    - Registros de segmento que son utilizados para almacenar informacion de la tabla de segmentos activa del proceso en ejecucion. 
+
+c) El grafico se encuentra en la explicacion.
+
+d) Se puede producir fragmentacion externa.

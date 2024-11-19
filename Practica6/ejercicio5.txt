@@ -1,0 +1,16 @@
+a) Un driver es un programa o conjunto de programas que actuan como intermediario entre el SO y un dispositivo de hardware en especifico. Su tarea especifica
+    es traducir las intrucciones de alto nivel en comandos que el dispositivo pueda entender. 
+
+b) Las funciones minimas que deben proveer son:
+    - Configuracion del dispositivo.
+    - Transferencia de datos.
+    - Control del dispositivo.
+    - Manejo de errores.
+    - Gestionar las interrupciones.
+    - Presentar una interfaz estandarizada al SO.
+
+c) Los que determinan cuales deben ser estas funciones son los fabricantes del hardware, los desarrolladores del SO y los estandares de la industria que
+    establecen especificaciones comunes para garantizar compatibilidad entre dispositivos y sistemas operativos. 
+
+
+

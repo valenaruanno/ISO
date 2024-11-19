@@ -1,6 +1,0 @@
-4) 
-    a- El timer fijo es una variante del RR donde el contador se inicializa en Q cuando su valor es 0, donde Q es compartido entre procesos. Mientras que el timer variable del RR es una variante donde el contador se inicializa en Q cada vez que el proceso es asignado a la CPU.
-    Ejemplos: con el timer variable, cuando un proceso se esta ejecutando y ocurre un evento de E/S, al devolverle la CPU al proceso el Q se va a reiniciar.
-    Con el timer fijo, si el Quantum no se llega a consumir con un proceso, el entrante va a recibir el quantum restante y va a ser expulsado de la CPU cuando se le termine.
-
-    En timer fijo el cuantum es definido en la configuracion del SO o en el planificador. En timer variable el quantum es definido en la estructura de control de cada proceso.

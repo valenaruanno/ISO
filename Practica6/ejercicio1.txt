@@ -1,0 +1,10 @@
+a) Los dispositivos orientados a bloques son aquellos donde los datos se transfieren en bloques dee tamaño fijo. Se caracterizan por permitir un acceso 
+    aleatorio, es decir, se puede leer o escribir en cualquier bloque de datos directamente y son ideales para almacenar grandes volumenes de informacion.
+    En cambio, los dispositivos orientados a flujos son aquellos donde los datos se transfieren como una corriente continua de bytes o caracteres. Estos
+    permiten el acceso secuencial y son adecuados para dispositivos de comunicacion o entrada/salida en tiempo real. 
+
+b) Ejemplos de orientados a bloques: discos duros, discos solidos, CD, DVD, BLUE-RAY y memorias USD.  
+   Ejemplos de orientados a flujos: teclado, mouse, impresoras, microfonos. 
+
+c) Las diferencias se encuentran entre las velocidades, la sincronizacion, el acceso, el buffering, las interrupciones y el manejo de errores. El sistema
+    operativo debe encargarse de gestionar todos estos puntos mediante distintos mecanismos.
