@@ -75,27 +75,3 @@ Proceso hijo:
     La misma es una comunicacion unidireccional donde
     un proceso puede escribir un mensaje y otro leerlo.
 
-3)
-    First Come First Served -> Cuando hay procesos 
-        para ejecutar selecciona el mas viejo. El mismo
-        no favorece ningun tipo de procesos pero podemos decir que los CPU/Bound terminan al comenzar su primer rafaga, mientras que los I/O bound no. Es no apropiativo.
-
-    Shortest Job First -> Selecciona el proceso con 
-        la rafaga mas corta.Es no apropiativo y favorece a los procesos cortos ya que los largos pueden sufrir inanicion.
-
-    Round Robin -> Es un algoritmo FIFO donde cada 
-        proceso tiene un tiempo para utilizar el 
-        procesador (quantum). Si los procesos son cortos, este agoritmo no es favorable.
-
-    Prioridades -> Cada proceso tiene un valor asociado
-        que representa su prioridad, cuanto menor es
-        mayor prioridad tiene. Es un algoritmo apropiativo o no dependiendo de si el proceso es lagor y la prioridad es alta.
-
-4) 
-    a- El timer fijo es una variante del RR donde el contador se inicializa en Q cuando su valor es 0, donde Q es compartido entre procesos. Mientras que el timer variable del RR es una variante donde el contador se inicializa en Q cada vez que el proceso es asignado a la CPU.
-    Ejemplos: con el timer variable, cuando un proceso se esta ejecutando y ocurre un evento de E/S, al devolverle la CPU al proceso el Q se va a reiniciar.
-    Con el timer fijo, si el Quantum no se llega a consumir con un proceso, el entrante va a recibir el quantum restante y va a ser expulsado de la CPU cuando se le termine.
-
-    En timer fijo el cuantum es definido en la configuracion del SO o en el planificador. En timer variable el quantum es definido en la estructura de control de cada proceso.
-
-5- 
