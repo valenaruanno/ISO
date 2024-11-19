@@ -1,0 +1,7 @@
+a) La inanicion de procesos ocurre cuando un proceso en un sistema no puede acceder a los recursos necesarios para continuar su ejecucion debido a la 
+    asignacion desigual o prioritaria de recursos.
+
+b) Los algoritmos vistos que la pueden provocar son: FCFS, SJF, Prioridades con procesos de baja prioridad.
+
+c) Si existe una tecnica denominada aging o envejecimiento donde se incremetna gradualmente la prioridad de los procesos en espera para garantizar que
+    eventualmente sean ejecutados. Esta tecnica sirve para el algoritmo de Prioridades. 
