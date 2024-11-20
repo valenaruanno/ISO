@@ -1,0 +1,20 @@
+Particiones de igual tamaño: 
+    - Ventajas: 
+        - Simplicidad de implementacion: simplifica los algoritmos de asignacion.
+        - Velocidad en la asignacion: cualquier particion libre puede ser utilizada.
+        - Predecibilidad: permite un tamaño uniforme, lo que facilita la planificacion de recursos.
+    - Desventajas:
+        - Producen fragmentaciono interna si un proceso no utiliza todo el espacio de particion.
+        - Ineficiencia en el uso de memoria ya que no se adapta bien a los procesos con tamaño variado.
+
+
+Particiones de diferente tamaño:
+    - Ventajas:
+        - Reduccion de la fragmentacion interna. 
+        - Permite una mejor adaptacion a la variedad de tamaños de los procesos.
+    - Desventajas:
+        - Requiere de algoritmos mas elaborados para decidir en que particion colocar cada proceso, lo que pude aumenar
+          el tiempo de asignacion.
+        - Produce fragmentacion externa ya que pueden quedar particiones libres por no ser lo suficientemente grandes
+          como para los procesos que llegan.
+        - Se puede llegar a desperdiciar espacio debido a que los procesos chicos utilizan particciones grandes.  

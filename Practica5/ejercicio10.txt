@@ -1,0 +1,6 @@
+Las similitudes entre las particiones dinamicas y la segmentacion es que ambas varian de tamaño segun el proceso, pueden
+generar fragmentacion interna y ambas utilizan direcciones logicas que deben ser convertidas en direcciones fisicas para
+poder acceder a la memoria.
+Las diferencias que existen entre ambas es que, por ejemplo, la segmentacion utiliza una tabla de segmentos y refleja la
+estructura logica del programa, dividiendo segun sus partes funcionales mientras que las particiones dinamicas no
+consideran las estructuras logicas de los programas, sino que asignan un unico bloque continuo por proceso.

@@ -1,0 +1,14 @@
+a- Capacidad del disco = (6 * 2) * 1100 * 300 * 512
+                       = 12 * 1100 * 300 * 512 
+                       = 2.027.520.000 bytes
+        Convirtiendo la cantidad a Gibibytes = 2.027.520.000
+                                               ------------- = 1.933,59
+                                                   2^20
+
+
+b- 1er paso: calculamos la capacidad de 1 cara:
+    1100 * 300 * 512 = 168.960.000
+   
+   2do paso: convertimos la cantidad de Mibibytes a bytes y la dividimos sobre la capacidad de la cara
+    n bytes = 3 * 2^20 -> 3.145.728 bytes y ahora???? 
+    

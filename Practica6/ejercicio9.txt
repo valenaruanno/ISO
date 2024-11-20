@@ -1,0 +1,14 @@
+Los servicios que provee el SO para E/S son:
+    - Abstraccion de dispositivos: provee una interfaz uniforme para diferentes tipos de dispositivos E/S, ocultando
+      las complejidades dal hardware.
+    - Gestion de dispositivos: detecta y gestiona todos los dispositivos conectados al sistema, lo que incluye la carga
+      de los drivers y su interaccion con el hardware. 
+    - Planificacion y control de E/S: administra el acceso a los dispositivos compartidos mediante politicas de 
+      planificacion, como la asignacion de prioridades y el control de concurrencia para evitar conflicto. 
+    - Buffering y Spooling: gestiona el almacenamiento temporal de datos para optimizar las operaciones de E/S.
+    - Sincronizacion y notificaciones: coordina las operaciones de E/S mediante mecanismos como interrupciones, señales
+      o spolling para notificar a los procesos cuando las operaciones de E/S estan completas.
+    - Gestion de errores: detecta y maneja los fallos en dispositivos E/S o durante las operaciones. 
+    - Proteccion y seguridad: asegura que solo los procesos autorizados puedan acceder a dispositivos especificos y 
+      protege los daos durante las operaciones E/S.
+    - Proporciona servicios de alto nivel para operaciones de E/S.

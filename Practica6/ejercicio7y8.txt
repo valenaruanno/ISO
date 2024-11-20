@@ -1,0 +1,11 @@
+Pasos minimos para leer un archivo desde disco duro:
+    - El proceso envia una solicitud de lectura al SO.
+    - El SO comprueba la existencia del archivo.
+    - El SO encola la solicitud de lectura en la cola de E/S del dispositivo, en este caso, el disco duro.
+    - Una vez que se desencola la solicitud, el SO llama al driver del disco duro y el mismo se encarga de realizar la
+      traduccion de la solicitud en un comando que el dispositivo ejecutara.
+    - El driver le envia el comando a traves del bus del sistema al controlador del hardware del disco duro.
+    - El controlador del hardware accede a la posicion donde se encuentran los datos requeridos y los almacena en un 
+      bufer temporal. 
+    - Una vez que se tienen los datos, se genera una interrupcion a la cpu para avisarle que los datos estan listos. 
+    - El SO le comunica al proceso y este ultimo se vuelve a colocar en la cola de ready. 

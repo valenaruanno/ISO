@@ -1,2 +1,4 @@
-a- DEFINICION DE FRAGMENTACION INTERNA Y EXTERNA.
+a- La fragmentacion interna es aquella que se produce cuando queda una porcion de la localidad sin utilizar. Esta se 
+   produce en el esquema de particiones fijas. En cambio, la fragmentacion externa son huecos que van quedando en la 
+   memoria a medida que los procesos finalizan y se produce en el esquema de particiones dinamicas.
 b- La fragmentacion externa se puede solucionar a partir de la compactacion, pero este metodo es muy costoso.

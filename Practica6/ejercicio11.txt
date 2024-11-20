@@ -1,0 +1,4 @@
+Seek time -> es el tiempo que tarda en posicionarse la cabeza lectora/escritora en el cilindro.
+Latency time -> tiempo que sucede desde que la cabeza se posiciona en el cilindro hasta que el sector en cuestion pasa por
+    debajo de la misma.
+Transfer time -> tiempo de transferencia del sector (bloque) del disco a la memoria.

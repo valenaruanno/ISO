@@ -1,0 +1,7 @@
+Las similitudes que existen entre ambas es que dividen el espacio de direccion de un proceso para facilitar la gestion
+y asignacion de memoria. Tambien utilizan estructuras de datos especificas para mapear las divisiones logicas a sus 
+ubicaciones fisicas en la memoria. Por el contrario, en cuanto a sus diferencias, la segmentacion a memoria se divide en
+bloques de tamaños variables y en la paginacion de tamaño fijo. La primera produce fragmentacion externa, mientras que 
+la segunda interna, y en paginacion la memoria logica se divide en un numero de paginas y un desplazamiento que son 
+calculados con la ayuda de una unidad de gestion de memoria (MMU) con soporte para paginacion y en la segmentacion 
+se divide en un numero de segmentos y un desplazamiento. 
