@@ -1,0 +1,6 @@
+En el caso de los procesos ligados a CPU, el SRTF puede perjudicarlos debido a que estos procesos suelen ser mas largos y son desplazados por los procesos 
+mas cortos pudiendo generar inanicion. En el caso de los procesos ligados a E/S no los perjudicaria ya que estos suelen ser mas cortos y tiende a priorizarlos.
+
+Por otro lado, el algoritmo de Round Robin para los procesos ligados a E/S puede perjudicarlos ya que realiza muchos cambios de contexto para operaciones de 
+E/S, entrando en estado de espera para volver a recuperar la CPU y dejando tiempo del Quantum inutilizado. En el caso de los procesos ligados a CPU, estos 
+requieren largos tiempos de CPU y son limitados por el tiempo del quantum, reduciendo la eficiencia de su ejecucion. 

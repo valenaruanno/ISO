@@ -1,0 +1,4 @@
+Si, puede suceder. Cuando la cantidad de CPU de un proceso no sea multiplo de la cantidad de Quantum porque siempre van a sobrar tiempos de quantum 
+sin utilizar.
+
+    Por ejemplo: con un q = 5 y un proceso cuyo CPU = 5, el proceso se ejecutaria una vuelta de quantum y no le sobraria ninguna unidad.
