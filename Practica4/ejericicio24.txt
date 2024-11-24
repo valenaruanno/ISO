@@ -1,0 +1,20 @@
+a- La huella de un proceso en un procesador se refiere a los datos especificos y el conjunto de recursos asociados 
+    a la ejecucion de un proceso en un procesador. 
+
+b- La afinidad con un procesador se refiere a la preferencia o restriccion para que un proceso sea ejecutado en un 
+    procesador especifico o en un conjunto de procesadores. 
+
+c- Eso mejora el rendimiento debido a: 
+    - Eficiencia en el uso de la cache: la ifnormacion relacionada con un proceso ya esta almacenada en la cache del 
+        procesador.
+    - Reduccion del overhead: cambiar de procesador requiere guardar el contexto de un proceso.
+    - Optimizacion del hardware: algunos algoritmos o tareas pueden beneficiarse de la ejecucion continua en un procesador
+        para evitar inconsistencias. 
+
+d- Si, en windows la puede cambiar desde el administrador de tareas y en linux utilizando el comando taskset.
+
+e- Balanceo de carga es una tecnica para distribuir tareas y procesos entre varios recursos con el objetivo de optimizar
+    el uso de los recursos, maximizar el rendimiento y evitar la sobrecarga en alguno de ellos.
+
+f- El balanceo de carga afecta la afinidad debido a que el balanceo intenta distribuir las tareas y proceso, mientras que 
+    la afinidad intenta restringir la distribucion de un proceso en varios procesadores.  

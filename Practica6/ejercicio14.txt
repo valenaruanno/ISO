@@ -1,0 +1,1 @@
+Todos los algoritmos causan nanicion menos el algoritmo de FCFS.    

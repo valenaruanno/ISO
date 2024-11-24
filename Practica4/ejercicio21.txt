@@ -1,0 +1,3 @@
+Se aproxima a FIFO ya que al incrementarle el quantum los procesos pueden llegar a tener tiempo de sobra para ejecutarse 
+por lo que en una pasada de quantum podrian ejecutarse tranquilamente lo que hace que los procesos se ejecuten 
+secuencialmente.

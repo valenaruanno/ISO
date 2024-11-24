@@ -1,0 +1,21 @@
+- Tabla de paginas de 1 nivel -> Es una estructura lineal que mapea cada pagina virtual a su marco fisico correspondiente.
+    Esta tecnica funciona utilizando el numero de pagina para buscar en la tabla de paginas el marco fisico correspondiente
+    y a su vez combina este con el desplazamiento para obtener la direccion fisica. La direccion logica esta formada por 
+    el numero de pagina en los bits mas significativos y en los menos significativos el desplazamiento.
+
+- Tabla de paginas de 2 niveles -> Esta tecnica organiza las paginas en una jerarquia, reduciendo la memoria desperdiciada
+    en entradas no utilizadas. 
+    Para obtener la direccion fisica a partir de la logica divide esta ultima en 3:
+        - Directorio de paginas (primera parte).
+        - El resultado apunta a una tabla secundaria donde se busca el marco fisico correspondiente. 
+        - Finalmente combina el desplazamiento para obtener la direccion logica. 
+
+- Tabla de paginas invertidas -> es una estructura compacta donde cada marco de paginas en memoria fisica tiene una entrada
+    que registra que pagina virtual esta asignada a el. Esta tabla de paginas contiene una entrada por cada marco de 
+    memoria fisica, cada entrada almacena el numero de pagina virtual y el ID del proceso que posee esa pagina, y por 
+    ultimo, para buscar una direccion fisica, el sistema realiza una busqueda en la tabla para encontrar el marco asociado
+    a la pagina virtual. 
+
+    Para pasar de la direccion virtual a la fisica divide la primera en numero de pagina y desplazamiento. Realiza una 
+    busqueda en la tabla de paginas invertida para encontrar la entrada que corresponde al numero de pagina virtual y al 
+    ID del proceso y luego utiliza el numero de marco encontrado combinandolo con el desplazamiento.

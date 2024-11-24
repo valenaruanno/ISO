@@ -1,0 +1,13 @@
+a- Las PCs de escritorios habituales se asocian a multiprocesadores homogeneos ya que son tipicamente similares en 
+    capacidad y diseño, ya que pertenecen a la misma arquitectura, y multiacoplados ya que los nucleos del procesador 
+    comparten la misma memoria principal y estan coordinados bajo el control de un unico sistema operativo, los que es 
+    caracteristico en sistemas de con memoria compartida.
+
+b- Esto significa que todos los prcoesos tienen el mismo rol y pueden ejecutar tareas del sistema operativo y procesos de
+    usuario indistintamente. Ademas, la planificacion de tareas se realiza de forma equitativa, distribuyendo la carga de
+    trabajos entre los procesadores para optimizar el rendimiento. Esto ocurre en sistema SMP donde no existe jerarquia 
+    entre procesos. 
+
+c- Esto significa que uno de los procesadores trabaja como maestro siendo el responsable de la toma de desiciones, como 
+    la planificacion, asignacion de tareas y manejo del sistema operativo, y los demas funcionan como esclavos y solo 
+    ejecutan las tareas que les asigna el procesador maestor sin tener la capacidad de tomar desiciones por si mismos.

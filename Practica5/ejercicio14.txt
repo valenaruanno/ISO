@@ -1,0 +1,13 @@
+a- Los page faults se producen cada vez que hay que alocar una pagina en un marco. 
+b- El encargado de detectar los page faults es el MMU. 
+c- Las acciones para manejar los fallos de pagina son: 
+    - La MMU envia una interrupcion para notificar al SO que sucedio un fallo de pagina.
+    - El SO inspecciona la tabla de paginas para detectar si la pagina solicitada esta en el almacenamiento secundario
+        pero no en memoria y ademas, si se trata de un acceso no permitido.
+    - Determinar la ubicacion de la pagina faltante. 
+    - Eleccion de un marco libre en memoria. 
+    - Si la pagina reemplazada esta modificada, el SO la escribe devuelta al almacenamiento secudario antes de liberar el 
+        marco.
+    - Cargar la pagina faltante en memoria.
+    - Acutalizar la tabla de paginas. 
+    - Reiniciar la instruccion interrumpida. 

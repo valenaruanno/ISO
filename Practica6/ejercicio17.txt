@@ -1,0 +1,34 @@
+- Asignacion contigua -> Los bloques de disco asignados a un archivo se encuentran almacenados en forma contigua.
+
+    -Ventajas: 
+        - Acceso rapido.
+        - Facil de implementar y manejar.
+    -Desventajas: 
+        - Fragmentacion externa -> es dificil encontrar los bloques contiguos para archivos grandes.
+        - Dificultad para manejar el crecimiento del archivo -> si no hay espacio contiguo adicional se requiere 
+            reubicacion.
+        - Puede llevar a desperdicio de espacio si se reserva mas espacio del necesitado.
+
+- Asignacion enlazada -> los bloques que forman un archivo no necesitan ser contiguos, pero estan enlazados mediante 
+    punteros. 
+
+    -Ventajas: 
+        - No require bloques contiguos, lo que evita la fragmentacion interna.
+        - Manejo eficiente de archivos dinamicos que crecen y decrecen. 
+        - Facil de implementar. 
+    -Desventajas:
+        - Acceso lento para lecturas aleatorias. 
+        - Utiliza espacio adicional para los punteros en cada bloque, lo que reduce el espacio disponible para datos. 
+        - Riesgo de perdida de datos si un puntero se corrompe.
+
+- Asignacion indexada -> Se utiliza una estructura de indices para almacenar las direcciones de los bloques de disco que 
+    componen un archivo. 
+
+    -Ventajas: 
+        - Acceso directo a cualquier bloque de disco. 
+        - Manejo eficiente de archivos grandes, ya que no requiere de bloques contiguos ni enlaces en cada bloque.
+        - Al convinar lo mejor de las asignacions contriguas y enlazadas, elimina la fragmentacion externa y los accesos
+            secuenciales lentos.
+    -Desventajas: 
+        - Espacio adicional requerido para almacenar la tabla de indices.
+        - Puede requerir bloques adicionales si el archivo es muy grande, lo que complica el manejo.

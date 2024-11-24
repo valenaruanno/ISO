@@ -1,0 +1,20 @@
+a- Los beneficios de a memoria virtual son:
+    - Multiprogramacion eficiente: permit ejecutar varios procesos a la vez independientemente de la cantidad de 
+        memoria fisica disponible.
+    - Espacio de memoria logica mayor.
+    - Aislamiento entre procesos.
+    - Facilidad de carga y ejecucion: los programas no necesariamente tienen que estar todos cargados para 
+        ejecutarse, solo basta con que esten las paginas necesarias.
+    - Optimizacion del uso de la memoria.
+    - Soportes a tecnicas como Swapping.
+
+b- Para implementarlo el SO se debe apoyar en:
+    - Hardware especializado -> una MMU y y una memoria cache que almacene las traducciones.
+    - Tabla de paginas.
+    - Almacenamiento secundario.
+    - Soportes del mismo sistema -> algoritmos de reemplazo de paginas, gestion de interrupciones de fallo de paginas y 
+        mecanismos de proteccion y permisos para evitar accesos no autorizados. 
+    - Controladores para dispositivos de almacenamiento. 
+
+c- Las paginas tambien deben incluir bits de presencia, ausencia, de modificacion y acceso, permisos de acceso y 
+    la ubicacion en el almacenamiento secundario. 

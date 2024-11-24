@@ -1,0 +1,28 @@
+I - Teniendo en cuenta que tiene 32 bits el espacio de direcciones, la cantidad de direcciones que puede referenciar es 
+        2^32 = 4.294.967.296
+
+    Dado que cada direccion referencia 1 byte, el tamaño del espacio de direcciones es 4.294.967.296 bytes, lo cual es el 
+        tamaño maximo del proceso. 
+
+II- Para pasar de 512kb a bytes realizo la siguiente cuenta: 512 * 2^10 = 524.288 bytes 
+
+    Luego para obtener el numero de paginas divido el tamaño del espacio de direcciones sobre el tamaño de cada pagina 
+        4.294.967.296
+        ------------- = 8.192 paginas 
+           524.288
+
+III- Para pasar de 296Mb a bytes realizo la siguiente cuenta: 296 * 2^20 = 268.435.456 bytes 
+     Para pasar de 512kb a bytes realizo la siguiente cuenta: 512 * 2^10 = 524.288 bytes
+
+     Si dividimos el tamaño de memoria real sobre el tamaño de cada pagina obtenemos el numero de marcos 
+        268.435.456
+        ----------- = 512 marcos 
+          524.288
+
+IV- Para pasar de 2Kb a bytes realizamos la siguiente cuenta: 2 * 2^10 = 2048 bytes 
+
+    El tamaño maximo de la tabla de paginas de cada proceso seria   el tamaño maximo de paginas multiplicado por 
+    la cantida de entrada en la tabla de paginas de un proceso
+
+        8.192 * 2048 = 16.777.216
+

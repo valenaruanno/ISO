@@ -1,0 +1,12 @@
+a- El metodo mas sencillo para implementar seria el Round Robin debido a que funciona bien en los sitemas homogeneos donde 
+    todos los procesadores tienen capacidades iguales.
+
+b- Las ventajas del Round Robin son:
+        - Simplicidad.
+        - Equidad. 
+        - Buena respuesta para sistemas interactivos.
+        - Adaptabilidad.
+   Las desventajas del Round Robin son:     
+        - Ineficiencia en procesos largos.
+        - Dependencia del quantum.
+        - Poca priorizacion. 

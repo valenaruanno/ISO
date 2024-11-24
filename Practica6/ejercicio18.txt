@@ -1,0 +1,38 @@
+- Tabla de bits -> El espaci diisponible se representa como una tabla de bits, donde cada bit corresponde a 1 bloque 
+    de disco.
+
+    -Ventajas: 
+        - Busqueda eficiente si la tabla esta en memoria.
+        - Ideal para sistemas donde se necesitn asignaciones masivas en bloque.
+    -Desventajas: 
+        - Consume el espacio proporcional al tamaño de un disco. 
+        - Requiere procesamiento adicional para procesar la tabla, especialmente en discos grandes. 
+
+- Lista ligada -> Los bloques libres se organizan como una lista ligada. Cada uno contiene un puntero al siguiente 
+    bloque libre.
+
+    -Ventajas: 
+        - No necesitan estructuras adicionales grandes.
+        - Facil de implementar. 
+    -Desventajas: 
+        - Acceso lento.
+        - Los punteros ocupan espacio en los bloques libres, reduciendo el espacio disponible.
+
+- Agrupamiento -> Utiliza una lista enlazada pero con una optimizacion. En lugar de enlazar cada bloque libre, un 
+    bloque especial almacena direcciones de varios bloques libres.
+
+    -Ventajas:
+        - Reduce la sobrecarga de punteros al agrupar direcciones.
+        - Permite localizar multiples bloques libres en una sola busqueda.
+    -Deventajas:
+        - La gestion de bloques de punteros puede ser compleja en sistemas grandes.
+        - Si los bloques de punteros se corrompen puede haber perdida de informacion.
+
+- Recuento -> En lugar de enumerar cada bloque libre, se registran solo los grupos contiguos de bloques libres.
+
+    -Ventajas: 
+        - Muy eficiente para discos con grandes regiones contiguas libres.
+        - Consume menos espacion.
+    -Desventajas:
+        - Poco efectivo si el espacio libre esta fragmentado.
+        - Dificultad para manejar escenarios con mucha fragmentacion, ya que los bloques contiguos son raros. 

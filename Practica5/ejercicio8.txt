@@ -1,5 +1,8 @@
-a- Para representar una direccion logica se requieren log2 1024 = 10bits.
+a- Para representar una direccion logica se requieren log2 1024*8 = 13 bits.
 
 b- Para representar una direccion fisica se requieren:
     - 1024 * 32 = 32.768, teniendo en cuenta que los marcos se encuentran desde la direccion fisica 0 tendriamos un rango [0, 32.767]
     - log2 32.768 = 15bits. 
+
+
+    Asumiendo que es una direccion por byte
