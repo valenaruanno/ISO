@@ -1,0 +1,10 @@
+a- WSa(24) = {4,5,6}
+    WSb(24) = {2,3,5,6}
+
+b- WSa(60) = {1,2,3,4,5}
+    WSb(60) = {3,4,5}
+
+c- Si contamos con 8 frames, no estariamos ante una situacion de trashing. En cambio,
+    si contraramos con 6 frames, si. 
+
+d- 
