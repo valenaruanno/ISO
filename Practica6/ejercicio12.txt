@@ -1,8 +1,8 @@
-a- Capacidad del disco = (6 * 2) * 1100 * 300 * 512
-                       = 12 * 1100 * 300 * 512 
-                       = 2.027.520.000 bytes
-        Convirtiendo la cantidad a Mibibytes = 2.027.520.000
-                                               ------------- = 1.933,59
+a- Capacidad del disco = (7 * 2) * 1100 * 300 * 512
+                       = 14 * 1100 * 300 * 512 
+                       = 2.365.440.000 bytes
+        Convirtiendo la cantidad a Mibibytes = 2.365.440.000
+                                               ------------- = 2.255,859
                                                    2^20
 
 
@@ -15,4 +15,21 @@ b- 1er paso: calculamos el tamaño de 3 mebibytes en bytes:
        512 
 
 c- 
+    Latencia -> 30000
+                ----- = 3,33
+                 9000
+
+    Transferencia -> 15 Mibits → 1 s = 1000 ms
+                    256 bytes → x
+
+    Unificamos todo 
+                    1.048.576.000 * 256
+                    --------------------------- = 34.133,3
+                           15.728.640   
+
+    
+     Total = 10 + 3,33 + (34.133,3 * 15) = 512.013,3
+    
+d- (10 + 3,33 + 32000) * 15 = 480.199,95
+    
     

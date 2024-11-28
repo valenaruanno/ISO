@@ -1,0 +1,14 @@
+a-
+    - Hiperpaginacion. 
+    - No, en este caso si aumentamos el nivel de programacion se producirian mas fallos de pagina.
+    -No, no lo esta siendo, hasta incluso se podria decir que la esta empeorando.
+
+b-
+    - En este caso el funcionamiento se esta dando de manera eficiente debido a que los procesos estan accediendo a memoria de manera efectiva.
+    - Si.
+    - Si, la paginacion esta funcionando como se espera.
+
+c-
+    - Sucede que no se estan aprovechando los recursos de la CPU debido a que no hay muchos procesos en ejecucion.
+    - Si, es necesario aumentar el nivel de multiprogramacion.
+    - No esta siendo relevante la paginacion ya que la memoria no esta siendo utilizada intensivamente.

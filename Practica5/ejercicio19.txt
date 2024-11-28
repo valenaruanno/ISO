@@ -1,0 +1,29 @@
+a- 
+    Asignacion fija: a cada proceso se le asigna una cantidad arbitraria de marco. A su vez el reparto puede ser:
+        - Equitativo: se reparte X cantidad a cada proceso.
+        - Proporcional: se reparte en base a la necesidad que tiene cada proceso.
+    
+    Asignacion dinamica: los procesos se van cargando de forma dinamica de acuerdo a la cantidad de marcos que necesiten. 
+
+
+b- 
+    I- Le corresponderian 10 marcos a cada proceso.
+    II- Para obtener la cantida de marcos realizamos la signiente cuenta: (cant paginas del proceso / cant total de paginas) * cant marcos 
+        Al proceso 1 le corresponderian: 15 
+                                        --- * 40 = 10 marcos  
+                                        63 
+        
+        Al proceso 2 le corresponderian: 20 
+                                        --- * 40 = 13 marcos  
+                                        63   
+
+        Al proceso 3 le corresponderian: 20 
+                                        --- * 40 = 13 marcos  
+                                        63
+
+        Al proceso 4 le corresponderian: 8 
+                                        --- * 40 = 4 marcos (redondeo ajustado)  
+                                        63                                                           
+                                           
+
+c- El reparto que resulta mas eficiente es el (II) ya que por ejemplo, el proceso 4 no va a utilizar la misma cantidad de marcos que el proceso 2 o 3.

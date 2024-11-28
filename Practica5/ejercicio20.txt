@@ -1,0 +1,30 @@
+a- Clasificando de malo a bueno:
+    - FIFO -> a menudo presenta peores tasas de fallo ya que dado un mayor numero de marcos no garantiza menos fallos.
+    - Segunda chance -> Reduce los fallos ya que considera si ha sido utilizada antes de remplazarla. 
+    - LRU -> Reemplaza la pagina que lleva mas tiempo sin utilizarse.
+    - Optimo -> Reemplaza la pagina que no se utilizara por mas tiempo en el futuro
+
+b- 
+    - FIFO: reemplaza la pagina que lleva mas tiempo en memoria independientemente si ha sido utilizada o no utilizando una cola circular. 
+        - Ventajas -> Es sensilla de implementar.
+        - Desventajas -> puede reemplazar paginas activas, causando altas tasas de fallos.
+    
+    - Segunda chance: Es igual al FIFO pero agrega un bit de uso. Si una pagina esta marcada como usada, no se reemplaza inmediatamente y se le da una 
+        segunda chance. 
+        - Ventajas -> reduce la probabilidad de reemplazar paginas activas.
+        - Desventajas -> Puede requerir mas rotaciones,     afectando el rendimiento en sistemas con muchas paginas.
+    
+    - LRU: reemplaza la pagina que no ha sido usada en el mayor tiempo y se pueede implementar con una lista enlazada que ordena las paginaspor su tiempo 
+        de uso o con un contador global para rastrear el ultimo acceso de cada pagina.
+        - Ventajas -> Se aprocxima al comportamiento optimo en escenarios realies.
+        - Desventajas -> Requiere hardware o software mas complejo para rastrear el historial de accesos.
+
+    - Optimo: Reemplaza la pagina que no sera utilizada por mas tiempo en el futuro y no es implementable en los sistemas reales por que requiere conocer
+        los accesos futuros.
+        - Ventajas -> tasa de fallos minima.
+        - Desventaja -> es purramente teorico y sirve como referencia para comparar otros algoritmos. 
+
+c- Si la pagina tiene el bit de dirty o modificado en 1, el SO debe tomar las ciertas medidas antes de liberar el marco:
+    - Escribir la pagina en el almacenamiento secundario para guardar los cambios, lo que requiere de una operacion de E/S.
+    - Marcar el marco como disponible luego de guardar los cambios ya que el marco pude ser reutilizado por la nueva pagina que causo el fallo. 
+    - Si el bit de dirty 0 0, no se necesita guardar los cambios, lo que ahorra tiempo. 

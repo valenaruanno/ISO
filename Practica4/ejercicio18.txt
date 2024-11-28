@@ -1,0 +1,2 @@
+Utilizaria una organizacion de colas de prioridad donde cada una de las colas se maneje con SJF. Asi podria equilibrar la inanicion de los
+procesos de mas duracion en el algoritmo SJF utilizando el metodo de realimentacion.

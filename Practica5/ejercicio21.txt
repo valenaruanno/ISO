@@ -1,0 +1,7 @@
+a- 
+    - Reemplazo global: el fallo de pagina de un proceso puede reemplazar la pagina de cualquier proceso.
+    - Reemplazo local: El fallo de pagina de un proceso solo puede reemplazar sus propias paginas. 
+
+b- No, n es posible por que en una asignacion fija, los marcos asociados a un proceso son exclusivos para el y no pueden ser tomados por otros procesos. En cambio, en el 
+    reemplazo global permite que cualquier proceso reemplace paginas en cualquier marco, incluso si el marco pertenece a otro proceso, lo que contradice la 
+    asignacion fija. 

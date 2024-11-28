@@ -1,0 +1,22 @@
+a- La hiperpaginacion se produce cuando un sistema pasa mas tiempo paginando que ejecutando procesos.
+
+b- Los motivos que la causan pueden ser:
+    - Insuficiencia de memoria.
+    - Mal disenio de aplicaciones.
+    - Demasiados procesos activos.
+    - Politica de reemplazo de paginas ineficientes.
+    - Uso excesivo de memoria virtual.
+
+c- La CPU puede detectar la hiperpaginacion mediante:
+    - Tasa de fallos de pagina.
+    - Uso excesivo de discos.
+    - Bajo uso del CPU.
+
+d- Para eliminar este problema el sistema puede;
+    - Reducir el grado de multiprogramacion. 
+    - Ajustar la asignacion de marcos de pagina. 
+    - Optimizar el reemplazo de paginas.
+    - Aumentar la memoria fisica.
+    - Reducir la carga del sistema.
+    - Reconfigurar la memoria virtual. 
+    

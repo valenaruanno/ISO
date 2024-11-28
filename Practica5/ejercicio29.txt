@@ -1,0 +1,2 @@
+a- La anomalia de belady ocurre cuando se utiliza el algoritmo FIFO y se trata de que al aumentar el numero de marcos de pagina asignados a un proceso, el 
+    numero de fallos de pagina tambien umenta, lo que no deberia ser normal. 

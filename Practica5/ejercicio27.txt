@@ -1,0 +1,2 @@
+d- Instalar mas memoria principal -> reduciria el nivel de hiperpaginacion, disminuyendo la carga en el dispositivo de paginacion y permitiendo que el 
+    procesador opere de manera mas eficiente. 

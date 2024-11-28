@@ -1,0 +1,20 @@
+Un tamanio de pagina pequenio tiene como:
+    - Ventajas:
+        - Menor fragmentacion interna. 
+        - Mayor granuladidad -> permite un mejor uso de la memoria fisica or que se cargan partes mas pequenias de los programas, solo lo necesario.
+        - Reduccion de desechos en programas pequenios -> Los programas pequenios ocupan menos paginas, minimizando el desperdicio de espacio.
+    - Desventajas
+        - Mayor tamanio de la tablas de paginas.
+        - Mayor sobrecarga en el manejo del sistema -> mas cambios de contexto y mas E/S.
+        - Mayor numero de fallos de pagina debido a que se necesitan cargar paginas con mas frecuencia por el menor tamanio de las paginas. 
+
+Un tamanio de pagina grande tiene como: 
+    - Ventajas:
+        - Menor tamanio de la tabla de paginas.
+        - Menor sobrecarga administrativa. 
+        - Menor numero de fallo de paginas.
+    - Desventajas:
+        - Mayor fragmentacion interna.
+        - Carga innecesaria de datos. 
+        - Uso ineficiente de la memoria fisica -> si las paginas son demasiado grandes puede haber menos espacio disponible para otros programas o 
+            procesos activos. 

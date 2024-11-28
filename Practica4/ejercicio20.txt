@@ -1,0 +1,7 @@
+a- Los tipos de trabajos que benefician un JSF son:
+    - Cortos acotados por CPU.
+    - Cortos acotados por E/S.
+
+b- Los tipos de trabajos que lo benefician son:
+    - Largos acotados por E/S. 
+    - Cortos acotados por E/S. 
